@@ -1,0 +1,1863 @@
+<!doctype html>
+<html lang="id" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TransLingo - Jasa Penerjemah Profesional & Tersumpah</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Inter & Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              navy: {
+                800: "#0B192C",
+                900: "#030811",
+              },
+              brand: {
+                blue: "#1E3E62",
+                gold: "#FFB800",
+                goldDark: "#E0A000",
+                cyan: "#00D8D6",
+                accent: "#2563EB",
+              },
+            },
+            fontFamily: {
+              sans: ["Plus Jakarta Sans", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .gradient-text {
+        background: linear-gradient(135deg, #2563eb 0%, #00d8d6 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .gradient-gold {
+        background: linear-gradient(135deg, #ffb800 0%, #f59e0b 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .glass-card {
+        background: rgba(255, 255, 255, 0.9);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(226, 232, 240, 0.8);
+      }
+      .glass-dark {
+        background: rgba(11, 25, 44, 0.85);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+    </style>
+  </head>
+  <body
+    class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-brand-accent selection:text-white"
+  >
+    <!-- Header Navigation -->
+    <header
+      class="fixed top-0 left-0 w-full z-50 transition-all duration-300 glass-card bg-white/90 shadow-sm"
+      id="navbar"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-20">
+          <!-- Logo -->
+          <a href="#" class="flex items-center gap-3 group">
+            <div
+              class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-blue to-brand-accent flex items-center justify-center text-white shadow-md group-hover:scale-105 transition-transform"
+            >
+              <i class="fa-solid fa-language text-xl"></i>
+            </div>
+            <div>
+              <span class="text-xl font-bold text-slate-900 tracking-tight"
+                >Trans<span class="text-brand-accent">Lingo</span></span
+              >
+              <span
+                class="block text-[10px] font-semibold uppercase tracking-widest text-slate-500 -mt-1"
+                >Translation & Localization</span
+              >
+            </div>
+          </a>
+
+          <!-- Desktop Menu -->
+          <nav
+            class="hidden md:flex items-center space-x-8 font-medium text-sm text-slate-600"
+          >
+            <a href="#layanan" class="hover:text-brand-accent transition-colors"
+              >Layanan</a
+            >
+            <a
+              href="#pasangan-bahasa"
+              class="hover:text-brand-accent transition-colors"
+              >Bahasa</a
+            >
+            <a
+              href="#kalkulator"
+              class="hover:text-brand-accent transition-colors flex items-center gap-1.5"
+            >
+              <span class="relative flex h-2 w-2">
+                <span
+                  class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"
+                ></span>
+                <span
+                  class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"
+                ></span>
+              </span>
+              Cek Biaya
+            </a>
+            <a
+              href="#portofolio"
+              class="hover:text-brand-accent transition-colors"
+              >Sampel</a
+            >
+            <a href="#proses" class="hover:text-brand-accent transition-colors"
+              >Cara Kerja</a
+            >
+            <a href="#faq" class="hover:text-brand-accent transition-colors"
+              >FAQ</a
+            >
+          </nav>
+
+          <!-- CTA Header Button -->
+          <div class="hidden md:flex items-center gap-3">
+            <a
+              href="https://wa.me/6281234567890?text=Halo,%20saya%20ingin%20konsultasi%20jasa%20penerjemahan"
+              target="_blank"
+              class="px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-sm transition-all shadow-md hover:shadow-lg flex items-center gap-2"
+            >
+              <i class="fa-brands fa-whatsapp text-lg"></i>
+              <span>Konsultasi Gratis</span>
+            </a>
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <button
+            id="mobile-menu-btn"
+            class="md:hidden text-slate-700 hover:text-brand-accent p-2 rounded-lg focus:outline-none"
+          >
+            <i class="fa-solid fa-bars text-2xl" id="menu-icon"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Menu Dropdown -->
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-6 space-y-3"
+      >
+        <a
+          href="#layanan"
+          class="block py-2 text-slate-600 font-medium hover:text-brand-accent"
+          >Layanan</a
+        >
+        <a
+          href="#pasangan-bahasa"
+          class="block py-2 text-slate-600 font-medium hover:text-brand-accent"
+          >Pasangan Bahasa</a
+        >
+        <a
+          href="#kalkulator"
+          class="block py-2 text-slate-600 font-medium hover:text-brand-accent text-emerald-600 font-semibold"
+          >Kalkulator Biaya</a
+        >
+        <a
+          href="#portofolio"
+          class="block py-2 text-slate-600 font-medium hover:text-brand-accent"
+          >Sampel Terjemahan</a
+        >
+        <a
+          href="#proses"
+          class="block py-2 text-slate-600 font-medium hover:text-brand-accent"
+          >Cara Kerja</a
+        >
+        <a
+          href="#faq"
+          class="block py-2 text-slate-600 font-medium hover:text-brand-accent"
+          >FAQ</a
+        >
+        <div class="pt-2">
+          <a
+            href="https://wa.me/6281234567890?text=Halo,%20saya%20ingin%20konsultasi%20jasa%20penerjemahan"
+            target="_blank"
+            class="w-full py-3 rounded-xl bg-emerald-600 text-white font-semibold text-center flex items-center justify-center gap-2"
+          >
+            <i class="fa-brands fa-whatsapp text-lg"></i>
+            <span>Hubungi via WhatsApp</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section
+      class="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden bg-slate-900 text-white"
+    >
+      <!-- Decorative background elements -->
+      <div class="absolute inset-0 opacity-20">
+        <div
+          class="absolute top-1/4 left-10 w-72 h-72 bg-brand-accent rounded-full blur-3xl"
+        ></div>
+        <div
+          class="absolute bottom-10 right-10 w-96 h-96 bg-brand-cyan rounded-full blur-3xl"
+        ></div>
+      </div>
+      <div
+        class="absolute inset-0 bg-[linear-gradient(to_right,#1f293712_1px,transparent_1px),linear-gradient(to_bottom,#1f293712_1px,transparent_1px)] bg-[size:24px_24px]"
+      ></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid lg:grid-cols-12 gap-12 items-center">
+          <div class="lg:col-span-7 space-y-8 text-center lg:text-left">
+            <div
+              class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-800/80 border border-slate-700 text-xs font-semibold text-brand-cyan shadow-inner"
+            >
+              <span
+                class="w-2 h-2 rounded-full bg-brand-cyan animate-pulse"
+              ></span>
+              Jasa Penerjemah Profesional & Tersumpah Resmi
+            </div>
+
+            <h1
+              class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight"
+            >
+              Akurasi Bahasa Tanpa Batas,
+              <span class="gradient-text">Tepat Waktu & Legal</span>
+            </h1>
+
+            <p
+              class="text-lg text-slate-300 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-light"
+            >
+              Layanan penerjemahan resmi dokumen legal, akademik, bisnis, dan
+              lokalisasi digital. Dikerjakan oleh linguis tersumpah
+              berpengalaman dengan garansi akurasi 99.8%.
+            </p>
+
+            <div
+              class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4"
+            >
+              <a
+                href="#kalkulator"
+                class="w-full sm:w-auto px-8 py-4 rounded-xl bg-brand-accent hover:bg-blue-600 text-white font-bold text-center shadow-lg shadow-blue-500/30 hover:scale-[1.02] transition-all flex items-center justify-center gap-3"
+              >
+                <i class="fa-solid fa-calculator"></i>
+                <span>Hitung Estimasi Biaya</span>
+              </a>
+              <a
+                href="https://wa.me/6281234567890?text=Halo,%20saya%20butuh%20penerjemah%20cepat"
+                target="_blank"
+                class="w-full sm:w-auto px-8 py-4 rounded-xl bg-slate-800 hover:bg-slate-700 text-white border border-slate-700 font-semibold text-center hover:scale-[1.02] transition-all flex items-center justify-center gap-3"
+              >
+                <i class="fa-brands fa-whatsapp text-emerald-400 text-xl"></i>
+                <span>Chat WhatsApp</span>
+              </a>
+            </div>
+
+            <!-- Quick Highlights Badges -->
+            <div
+              class="pt-4 flex flex-wrap items-center justify-center lg:justify-start gap-6 text-slate-400 text-sm border-t border-slate-800"
+            >
+              <div class="flex items-center gap-2">
+                <i class="fa-solid fa-circle-check text-emerald-400"></i>
+                <span>Penerjemah Tersumpah (Sworn)</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i class="fa-solid fa-shield-halved text-brand-cyan"></i>
+                <span>Jaminan Kerahasiaan (NDA)</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i class="fa-solid fa-rotate-left text-brand-gold"></i>
+                <span>Revisi Sepuasnya</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Stats Cards / Interactive Visual -->
+          <div class="lg:col-span-5">
+            <div class="relative mx-auto max-w-md">
+              <div
+                class="glass-dark rounded-3xl p-6 sm:p-8 shadow-2xl relative z-10 border border-slate-700/50"
+              >
+                <div
+                  class="flex items-center justify-between pb-6 border-b border-slate-800"
+                >
+                  <div>
+                    <h3 class="text-xl font-bold text-white">
+                      Layanan Unggulan
+                    </h3>
+                    <p class="text-xs text-slate-400">Ready to assist 24/7</p>
+                  </div>
+                  <span
+                    class="px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-xs font-semibold border border-emerald-500/20"
+                    >Active</span
+                  >
+                </div>
+
+                <div class="py-6 space-y-5">
+                  <div
+                    class="flex items-center justify-between p-3.5 rounded-xl bg-slate-800/60 border border-slate-700/60"
+                  >
+                    <div class="flex items-center gap-3">
+                      <div
+                        class="w-10 h-10 rounded-lg bg-blue-500/20 text-blue-400 flex items-center justify-center"
+                      >
+                        <i class="fa-solid fa-file-contract"></i>
+                      </div>
+                      <div>
+                        <h4 class="text-sm font-semibold text-white">
+                          Dokumen Legal & Sworn
+                        </h4>
+                        <p class="text-xs text-slate-400">
+                          Cap & Tanda Tangan Resmi
+                        </p>
+                      </div>
+                    </div>
+                    <i
+                      class="fa-solid fa-chevron-right text-slate-500 text-xs"
+                    ></i>
+                  </div>
+
+                  <div
+                    class="flex items-center justify-between p-3.5 rounded-xl bg-slate-800/60 border border-slate-700/60"
+                  >
+                    <div class="flex items-center gap-3">
+                      <div
+                        class="w-10 h-10 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center"
+                      >
+                        <i class="fa-solid fa-graduation-cap"></i>
+                      </div>
+                      <div>
+                        <h4 class="text-sm font-semibold text-white">
+                          Jurnal & Abstract Akademis
+                        </h4>
+                        <p class="text-xs text-slate-400">
+                          Standar Publikasi Scopus
+                        </p>
+                      </div>
+                    </div>
+                    <i
+                      class="fa-solid fa-chevron-right text-slate-500 text-xs"
+                    ></i>
+                  </div>
+
+                  <div
+                    class="flex items-center justify-between p-3.5 rounded-xl bg-slate-800/60 border border-slate-700/60"
+                  >
+                    <div class="flex items-center gap-3">
+                      <div
+                        class="w-10 h-10 rounded-lg bg-purple-500/20 text-purple-400 flex items-center justify-center"
+                      >
+                        <i class="fa-solid fa-globe"></i>
+                      </div>
+                      <div>
+                        <h4 class="text-sm font-semibold text-white">
+                          Lokalisasi Web & Software
+                        </h4>
+                        <p class="text-xs text-slate-400">
+                          Penerjemahan UI & Marketing
+                        </p>
+                      </div>
+                    </div>
+                    <i
+                      class="fa-solid fa-chevron-right text-slate-500 text-xs"
+                    ></i>
+                  </div>
+                </div>
+
+                <!-- Live Stats Counter inside card -->
+                <div
+                  class="grid grid-cols-3 gap-2 pt-4 border-t border-slate-800 text-center"
+                >
+                  <div>
+                    <p class="text-2xl font-bold text-brand-gold">1,200+</p>
+                    <p class="text-[11px] text-slate-400">Proyek Selesai</p>
+                  </div>
+                  <div>
+                    <p class="text-2xl font-bold text-brand-cyan">99.8%</p>
+                    <p class="text-[11px] text-slate-400">Akurasi Kata</p>
+                  </div>
+                  <div>
+                    <p class="text-2xl font-bold text-emerald-400">150+</p>
+                    <p class="text-[11px] text-slate-400">Klien Setia</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="layanan" class="py-20 bg-slate-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2
+            class="text-xs font-bold uppercase tracking-widest text-brand-accent mb-2"
+          >
+            Layanan Kami
+          </h2>
+          <p
+            class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight"
+          >
+            Solusi Bahasa Profesional Sesuai Kebutuhan Anda
+          </p>
+          <p class="mt-4 text-slate-600 leading-relaxed">
+            Kami menghadirkan hasil terjemahan berstandar tinggi yang
+            mempertahankan makna asli, konteks budaya, dan terminologi spesifik
+            industri.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Service 1 -->
+          <div
+            class="bg-white rounded-2xl p-8 border border-slate-200/80 shadow-sm hover:shadow-xl transition-all hover:-translate-y-1 group"
+          >
+            <div
+              class="w-14 h-14 rounded-2xl bg-blue-50 text-brand-accent flex items-center justify-center text-2xl mb-6 group-hover:bg-brand-accent group-hover:text-white transition-colors"
+            >
+              <i class="fa-solid fa-stamp"></i>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-3">
+              Penerjemahan Tersumpah (Sworn)
+            </h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6">
+              Dokumen resmi yang diakui oleh Kementerian, Kedutaan Besar, dan
+              Lembaga Hukum. Dilengkapi stempel dan tanda tangan legalitas resmi
+              penerjemah tersumpah.
+            </p>
+            <ul class="text-xs font-semibold text-slate-500 space-y-2 mb-6">
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-emerald-500"></i> Akta
+                Kelahiran, Nikah, Kematian
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-emerald-500"></i> Ijazah &
+                Transkrip Nilai
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-emerald-500"></i> Kontrak
+                Bisnis & Dokumen Hukum
+              </li>
+            </ul>
+          </div>
+
+          <!-- Service 2 -->
+          <div
+            class="bg-white rounded-2xl p-8 border border-slate-200/80 shadow-sm hover:shadow-xl transition-all hover:-translate-y-1 group"
+          >
+            <div
+              class="w-14 h-14 rounded-2xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-2xl mb-6 group-hover:bg-emerald-600 group-hover:text-white transition-colors"
+            >
+              <i class="fa-solid fa-book-bookmark"></i>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-3">
+              Penerjemahan Akademis
+            </h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6">
+              Membantu akademisi, dosen, dan mahasiswa menerjemahkan karya
+              ilmiah dengan terminologi riset yang presisi dan sesuai standar
+              jurnal internasional.
+            </p>
+            <ul class="text-xs font-semibold text-slate-500 space-y-2 mb-6">
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-emerald-500"></i> Jurnal Ilmiah
+                (Scopus/IEEE)
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-emerald-500"></i> Abstrak
+                Skripsi & Tesis
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-emerald-500"></i> Proposal
+                Penelitian & Paper
+              </li>
+            </ul>
+          </div>
+
+          <!-- Service 3 -->
+          <div
+            class="bg-white rounded-2xl p-8 border border-slate-200/80 shadow-sm hover:shadow-xl transition-all hover:-translate-y-1 group"
+          >
+            <div
+              class="w-14 h-14 rounded-2xl bg-purple-50 text-purple-600 flex items-center justify-center text-2xl mb-6 group-hover:bg-purple-600 group-hover:text-white transition-colors"
+            >
+              <i class="fa-solid fa-laptop-code"></i>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-3">
+              Lokalisasi Web & Aplikasi
+            </h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6">
+              Menyesuaikan aplikasi, website, dan konten digital Anda agar
+              relevan secara kultural dan alami bagi pengguna pasar target
+              global.
+            </p>
+            <ul class="text-xs font-semibold text-slate-500 space-y-2 mb-6">
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-emerald-500"></i> User
+                Interface (UI) App & Web
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-emerald-500"></i> Landing Page
+                & Copywriting
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-emerald-500"></i> E-commerce &
+                Manual Produk
+              </li>
+            </ul>
+          </div>
+
+          <!-- Service 4 -->
+          <div
+            class="bg-white rounded-2xl p-8 border border-slate-200/80 shadow-sm hover:shadow-xl transition-all hover:-translate-y-1 group"
+          >
+            <div
+              class="w-14 h-14 rounded-2xl bg-amber-50 text-amber-600 flex items-center justify-center text-2xl mb-6 group-hover:bg-amber-600 group-hover:text-white transition-colors"
+            >
+              <i class="fa-solid fa-pen-nib"></i>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-3">
+              Proofreading & Editing
+            </h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6">
+              Pemeriksaan mendalam untuk memperbaiki kesalahan tata bahasa
+              (grammar), ejaan, struktur kalimat, dan konsistensi gaya bahasa.
+            </p>
+            <ul class="text-xs font-semibold text-slate-500 space-y-2 mb-6">
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-emerald-500"></i> Grammar &
+                Punctuation Check
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-emerald-500"></i> Paraphrasing
+                & Natural Flow
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-emerald-500"></i> Formatting
+                Check
+              </li>
+            </ul>
+          </div>
+
+          <!-- Service 5 -->
+          <div
+            class="bg-white rounded-2xl p-8 border border-slate-200/80 shadow-sm hover:shadow-xl transition-all hover:-translate-y-1 group"
+          >
+            <div
+              class="w-14 h-14 rounded-2xl bg-rose-50 text-rose-600 flex items-center justify-center text-2xl mb-6 group-hover:bg-rose-600 group-hover:text-white transition-colors"
+            >
+              <i class="fa-solid fa-closed-captioning"></i>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-3">
+              Subtitling & Transkripsi
+            </h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6">
+              Pembuatan subtitle video berkualitas (SRT/VTT) dan transkripsi
+              audio/video menjadi teks dengan ketepatan waktu (timecoding) yang
+              presisi.
+            </p>
+            <ul class="text-xs font-semibold text-slate-500 space-y-2 mb-6">
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-emerald-500"></i> Video
+                Youtube, Film, & Iklan
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-emerald-500"></i> Transkripsi
+                Wawancara & Webinar
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-emerald-500"></i> Timecode
+                Synchronized SRT
+              </li>
+            </ul>
+          </div>
+
+          <!-- Service 6 -->
+          <div
+            class="bg-white rounded-2xl p-8 border border-slate-200/80 shadow-sm hover:shadow-xl transition-all hover:-translate-y-1 group"
+          >
+            <div
+              class="w-14 h-14 rounded-2xl bg-cyan-50 text-cyan-600 flex items-center justify-center text-2xl mb-6 group-hover:bg-cyan-600 group-hover:text-white transition-colors"
+            >
+              <i class="fa-solid fa-briefcase"></i>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-3">
+              Terjemahan Bisnis & Finansial
+            </h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6">
+              Mendukung pertumbuhan bisnis internasional Anda melalui
+              penerjemahan dokumen korporasi, laporan keuangan, dan presentasi.
+            </p>
+            <ul class="text-xs font-semibold text-slate-500 space-y-2 mb-6">
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-emerald-500"></i> Laporan
+                Keuangan & Tahunan
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-emerald-500"></i> Pitch Deck &
+                Company Profile
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-emerald-500"></i> Modul
+                Pelatihan Karyawan
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Language Pairs Section -->
+    <section
+      id="pasangan-bahasa"
+      class="py-16 bg-white border-y border-slate-200"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div
+          class="flex flex-col md:flex-row md:items-end justify-between mb-12"
+        >
+          <div>
+            <h2
+              class="text-xs font-bold uppercase tracking-widest text-brand-accent mb-2"
+            >
+              Jangkauan Bahasa
+            </h2>
+            <p class="text-3xl font-bold text-slate-900">
+              Pasangan Bahasa Utama
+            </p>
+          </div>
+          <p class="text-slate-500 text-sm mt-2 md:mt-0 max-w-md">
+            Diterjemahkan oleh penutur asli (native speaker) & penerjemah
+            tersumpah bersertifikat.
+          </p>
+        </div>
+
+        <div
+          class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4"
+        >
+          <!-- Lang 1 -->
+          <div
+            class="p-4 rounded-xl bg-slate-50 border border-slate-200/80 text-center hover:bg-white hover:shadow-md transition-all"
+          >
+            <span class="text-3xl mb-2 block">🇮🇩 ➔ 🇬🇧</span>
+            <h4 class="font-bold text-slate-800 text-sm">
+              Indonesia - Inggris
+            </h4>
+            <span class="text-[11px] text-emerald-600 font-semibold"
+              >Tersumpah & Native</span
+            >
+          </div>
+          <!-- Lang 2 -->
+          <div
+            class="p-4 rounded-xl bg-slate-50 border border-slate-200/80 text-center hover:bg-white hover:shadow-md transition-all"
+          >
+            <span class="text-3xl mb-2 block">🇨🇳 ➔ 🇮🇩</span>
+            <h4 class="font-bold text-slate-800 text-sm">
+              Mandarin - Indonesia
+            </h4>
+            <span class="text-[11px] text-emerald-600 font-semibold"
+              >HSK 6 / Fluent</span
+            >
+          </div>
+          <!-- Lang 3 -->
+          <div
+            class="p-4 rounded-xl bg-slate-50 border border-slate-200/80 text-center hover:bg-white hover:shadow-md transition-all"
+          >
+            <span class="text-3xl mb-2 block">🇯🇵 ➔ 🇮🇩</span>
+            <h4 class="font-bold text-slate-800 text-sm">Jepang - Indonesia</h4>
+            <span class="text-[11px] text-emerald-600 font-semibold"
+              >JLPT N1 Certified</span
+            >
+          </div>
+          <!-- Lang 4 -->
+          <div
+            class="p-4 rounded-xl bg-slate-50 border border-slate-200/80 text-center hover:bg-white hover:shadow-md transition-all"
+          >
+            <span class="text-3xl mb-2 block">🇰🇷 ➔ 🇮🇩</span>
+            <h4 class="font-bold text-slate-800 text-sm">Korea - Indonesia</h4>
+            <span class="text-[11px] text-emerald-600 font-semibold"
+              >TOPIK Level 6</span
+            >
+          </div>
+          <!-- Lang 5 -->
+          <div
+            class="p-4 rounded-xl bg-slate-50 border border-slate-200/80 text-center hover:bg-white hover:shadow-md transition-all"
+          >
+            <span class="text-3xl mb-2 block">🇸🇦 ➔ 🇮🇩</span>
+            <h4 class="font-bold text-slate-800 text-sm">Arab - Indonesia</h4>
+            <span class="text-[11px] text-emerald-600 font-semibold"
+              >Tersumpah / Legal</span
+            >
+          </div>
+          <!-- Lang 6 -->
+          <div
+            class="p-4 rounded-xl bg-slate-50 border border-slate-200/80 text-center hover:bg-white hover:shadow-md transition-all"
+          >
+            <span class="text-3xl mb-2 block">🇩🇪 ➔ 🇮🇩</span>
+            <h4 class="font-bold text-slate-800 text-sm">Jerman - Indonesia</h4>
+            <span class="text-[11px] text-emerald-600 font-semibold"
+              >Goethe C1/C2</span
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LIVE TRANSLATION FEE CALCULATOR -->
+    <section
+      id="kalkulator"
+      class="py-20 bg-slate-900 text-white relative overflow-hidden"
+    >
+      <div
+        class="absolute -top-24 -left-24 w-96 h-96 bg-brand-accent/20 rounded-full blur-3xl pointer-events-none"
+      ></div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center max-w-3xl mx-auto mb-14">
+          <span
+            class="px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-xs font-semibold border border-emerald-500/20"
+            >Kalkulator Transparan</span
+          >
+          <h2
+            class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mt-3"
+          >
+            Hitung Estimasi Biaya Terjemahan
+          </h2>
+          <p class="mt-3 text-slate-400 text-sm">
+            Dapatkan perkiraan biaya transparan secara langsung sebelum memesan.
+          </p>
+        </div>
+
+        <div
+          class="max-w-4xl mx-auto glass-dark rounded-3xl p-6 sm:p-10 border border-slate-700/80 shadow-2xl"
+        >
+          <div class="grid md:grid-cols-2 gap-8">
+            <!-- Left Column: Inputs -->
+            <div class="space-y-6">
+              <!-- Language Selection -->
+              <div>
+                <label
+                  class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2"
+                  >Pasangan Bahasa</label
+                >
+                <select
+                  id="calc-language"
+                  class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-brand-accent transition-colors"
+                >
+                  <option value="id-en" data-rate="120">
+                    Indonesia ➔ Inggris (Rp 120 / kata)
+                  </option>
+                  <option value="en-id" data-rate="100">
+                    Inggris ➔ Indonesia (Rp 100 / kata)
+                  </option>
+                  <option value="zh-id" data-rate="250">
+                    Mandarin ➔ Indonesia (Rp 250 / kata)
+                  </option>
+                  <option value="jp-id" data-rate="230">
+                    Jepang ➔ Indonesia (Rp 230 / kata)
+                  </option>
+                  <option value="kr-id" data-rate="220">
+                    Korea ➔ Indonesia (Rp 220 / kata)
+                  </option>
+                  <option value="ar-id" data-rate="180">
+                    Arab ➔ Indonesia (Rp 180 / kata)
+                  </option>
+                </select>
+              </div>
+
+              <!-- Service Category -->
+              <div>
+                <label
+                  class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2"
+                  >Tipe Layanan</label
+                >
+                <select
+                  id="calc-service"
+                  class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-brand-accent transition-colors"
+                >
+                  <option value="standard" data-multiplier="1">
+                    Terjemahan Standard (Umum / Web / Blog)
+                  </option>
+                  <option value="academic" data-multiplier="1.25">
+                    Terjemahan Akademis (Jurnal / Skripsi)
+                  </option>
+                  <option value="sworn" data-multiplier="1.75">
+                    Penerjemah Tersumpah / Legal (Cap Resmi)
+                  </option>
+                  <option value="proofread" data-multiplier="0.6">
+                    Proofreading & Editing Teks saja
+                  </option>
+                </select>
+              </div>
+
+              <!-- Count Mode & Input -->
+              <div>
+                <div class="flex justify-between items-center mb-2">
+                  <label
+                    class="block text-xs font-semibold uppercase tracking-wider text-slate-300"
+                    >Jumlah Kata / Halaman</label
+                  >
+                  <div
+                    class="inline-flex rounded-lg bg-slate-800 p-0.5 border border-slate-700 text-xs"
+                  >
+                    <button
+                      type="button"
+                      id="unit-word"
+                      class="px-2.5 py-1 rounded-md bg-brand-accent text-white font-medium"
+                    >
+                      Kata
+                    </button>
+                    <button
+                      type="button"
+                      id="unit-page"
+                      class="px-2.5 py-1 rounded-md text-slate-400 hover:text-white font-medium"
+                    >
+                      Halaman
+                    </button>
+                  </div>
+                </div>
+
+                <div class="relative">
+                  <input
+                    type="number"
+                    id="calc-quantity"
+                    value="500"
+                    min="1"
+                    class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 text-white text-lg font-bold focus:outline-none focus:border-brand-accent transition-colors"
+                  />
+                  <span
+                    id="unit-label"
+                    class="absolute right-4 top-3.5 text-xs text-slate-400 font-normal"
+                    >Kata (Estimasi ~ 2 Halaman)</span
+                  >
+                </div>
+                <p class="text-[11px] text-slate-400 mt-1">
+                  *1 Halaman dihitung rata-rata ~250 kata (Spasi 1.5, Font
+                  12pt).
+                </p>
+              </div>
+
+              <!-- Express Delivery Checkbox -->
+              <div
+                class="p-4 rounded-xl bg-slate-800/80 border border-slate-700 flex items-center justify-between"
+              >
+                <div class="flex items-center gap-3">
+                  <i class="fa-solid fa-bolt text-brand-gold text-lg"></i>
+                  <div>
+                    <p class="text-xs font-bold text-white">
+                      Layanan Express (Same-Day / Fast Track)
+                    </p>
+                    <p class="text-[11px] text-slate-400">
+                      Pengerjaan kilat 24 jam (+30% surcharge)
+                    </p>
+                  </div>
+                </div>
+                <input
+                  type="checkbox"
+                  id="calc-express"
+                  class="w-5 h-5 rounded accent-brand-accent cursor-pointer"
+                />
+              </div>
+            </div>
+
+            <!-- Right Column: Results & CTA -->
+            <div
+              class="bg-slate-800/90 rounded-2xl p-6 border border-slate-700/80 flex flex-col justify-between"
+            >
+              <div>
+                <h3
+                  class="text-slate-300 text-xs font-bold uppercase tracking-wider mb-4 border-b border-slate-700 pb-2"
+                >
+                  Rincian Estimasi
+                </h3>
+
+                <div class="space-y-3 text-xs text-slate-300">
+                  <div class="flex justify-between">
+                    <span class="text-slate-400">Tarif Dasar Kata:</span>
+                    <span
+                      id="summary-rate-base"
+                      class="font-semibold text-white"
+                      >Rp 120 / kata</span
+                    >
+                  </div>
+                  <div class="flex justify-between">
+                    <span class="text-slate-400">Tipe Dokumen:</span>
+                    <span
+                      id="summary-service-type"
+                      class="font-semibold text-white"
+                      >Standard</span
+                    >
+                  </div>
+                  <div class="flex justify-between">
+                    <span class="text-slate-400"
+                      >Estimasi Waktu Pengerjaan:</span
+                    >
+                    <span
+                      id="summary-time"
+                      class="font-semibold text-emerald-400"
+                      >1 - 2 Hari Kerja</span
+                    >
+                  </div>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-slate-700">
+                  <span
+                    class="text-xs uppercase font-semibold text-slate-400 tracking-wider"
+                    >Total Estimasi Biaya</span
+                  >
+                  <div
+                    class="text-3xl sm:text-4xl font-extrabold text-brand-cyan mt-1"
+                    id="total-price"
+                  >
+                    Rp 60.000
+                  </div>
+                  <p class="text-[10px] text-slate-400 mt-1">
+                    *Harga final dapat disesuaikan setelah pemeriksaan fisik
+                    dokumen.
+                  </p>
+                </div>
+              </div>
+
+              <div class="mt-8 space-y-3">
+                <button
+                  id="btn-order-wa"
+                  class="w-full py-4 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm transition-all shadow-lg shadow-emerald-900/40 flex items-center justify-center gap-2"
+                >
+                  <i class="fa-brands fa-whatsapp text-lg"></i>
+                  <span>Pesan via WhatsApp Dengan Perhitungan Ini</span>
+                </button>
+                <p class="text-[11px] text-center text-slate-400">
+                  Tanpa DP Awal untuk konsultasi pertama & review sampel.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio & Before/After Showcase -->
+    <section id="portofolio" class="py-20 bg-slate-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-12">
+          <h2
+            class="text-xs font-bold uppercase tracking-widest text-brand-accent mb-2"
+          >
+            Sampel Pekerjaan
+          </h2>
+          <p class="text-3xl font-extrabold text-slate-900">
+            Lihat Kualitas Hasil Terjemahan Kami
+          </p>
+          <p class="text-slate-600 text-sm mt-2">
+            Bandingkan teks asli dan hasil terjemahan presisi yang siap pakai.
+          </p>
+        </div>
+
+        <!-- Tab Buttons -->
+        <div class="flex justify-center gap-2 mb-8 overflow-x-auto pb-2">
+          <button
+            onclick="switchTab('abstract')"
+            id="tab-abstract"
+            class="tab-btn active px-5 py-2.5 rounded-xl font-semibold text-xs transition-all bg-brand-accent text-white shadow-md"
+          >
+            Abstrak Akademis
+          </button>
+          <button
+            onclick="switchTab('legal')"
+            id="tab-legal"
+            class="tab-btn px-5 py-2.5 rounded-xl font-semibold text-xs transition-all bg-white text-slate-600 hover:bg-slate-100"
+          >
+            Kontrak Bisnis / Legal
+          </button>
+          <button
+            onclick="switchTab('tech')"
+            id="tab-tech"
+            class="tab-btn px-5 py-2.5 rounded-xl font-semibold text-xs transition-all bg-white text-slate-600 hover:bg-slate-100"
+          >
+            SaaS & Web Localized
+          </button>
+        </div>
+
+        <!-- Sample Cards Grid Container -->
+        <div class="max-w-4xl mx-auto">
+          <!-- Sample 1: Abstract -->
+          <div
+            id="sample-abstract"
+            class="sample-content grid md:grid-cols-2 gap-6 bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm"
+          >
+            <div class="space-y-3">
+              <div
+                class="flex justify-between items-center pb-2 border-b border-slate-100"
+              >
+                <span
+                  class="text-xs font-bold text-slate-400 uppercase tracking-wider"
+                  >Teks Asli (Bahasa Indonesia)</span
+                >
+                <span
+                  class="text-xs bg-slate-100 text-slate-600 px-2 py-0.5 rounded"
+                  >Original</span
+                >
+              </div>
+              <p
+                class="text-slate-700 text-sm leading-relaxed italic bg-slate-50 p-4 rounded-xl border border-slate-100"
+              >
+                "Penelitian ini bertujuan untuk menganalisis dampak efisiensi
+                algoritma machine learning terhadap pemrosesan data berskala
+                besar pada sistem komputasi awan. Hasil pengujian menunjukkan
+                peningkatan performa sebesar 34%."
+              </p>
+            </div>
+
+            <div class="space-y-3">
+              <div
+                class="flex justify-between items-center pb-2 border-b border-slate-100"
+              >
+                <span
+                  class="text-xs font-bold text-brand-accent uppercase tracking-wider"
+                  >Hasil Terjemahan (English)</span
+                >
+                <span
+                  class="text-xs bg-blue-50 text-brand-accent px-2 py-0.5 rounded font-semibold"
+                  >Translated</span
+                >
+              </div>
+              <p
+                class="text-slate-800 text-sm leading-relaxed font-medium bg-blue-50/40 p-4 rounded-xl border border-blue-100"
+              >
+                "This study aims to analyze the impact of machine learning
+                algorithm efficiency on large-scale data processing in cloud
+                computing systems. The benchmark results demonstrate a 34%
+                performance enhancement."
+              </p>
+            </div>
+          </div>
+
+          <!-- Sample 2: Legal (Hidden by default) -->
+          <div
+            id="sample-legal"
+            class="sample-content hidden grid md:grid-cols-2 gap-6 bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm"
+          >
+            <div class="space-y-3">
+              <div
+                class="flex justify-between items-center pb-2 border-b border-slate-100"
+              >
+                <span
+                  class="text-xs font-bold text-slate-400 uppercase tracking-wider"
+                  >Teks Asli (Bahasa Indonesia)</span
+                >
+                <span
+                  class="text-xs bg-slate-100 text-slate-600 px-2 py-0.5 rounded"
+                  >Original</span
+                >
+              </div>
+              <p
+                class="text-slate-700 text-sm leading-relaxed italic bg-slate-50 p-4 rounded-xl border border-slate-100"
+              >
+                "Perjanjian ini berlaku sejak tanggal ditandatangani dan akan
+                tetap mengikat para pihak hingga seluruh kewajiban berdasarkan
+                Perjanjian ini diselesaikan sepenuhnya."
+              </p>
+            </div>
+
+            <div class="space-y-3">
+              <div
+                class="flex justify-between items-center pb-2 border-b border-slate-100"
+              >
+                <span
+                  class="text-xs font-bold text-brand-accent uppercase tracking-wider"
+                  >Hasil Terjemahan (English Sworn)</span
+                >
+                <span
+                  class="text-xs bg-blue-50 text-brand-accent px-2 py-0.5 rounded font-semibold"
+                  >Translated</span
+                >
+              </div>
+              <p
+                class="text-slate-800 text-sm leading-relaxed font-medium bg-blue-50/40 p-4 rounded-xl border border-blue-100"
+              >
+                "This Agreement shall become effective as of the date of
+                execution hereof and shall remain binding upon the parties until
+                all obligations hereunder are fully discharged."
+              </p>
+            </div>
+          </div>
+
+          <!-- Sample 3: Tech (Hidden by default) -->
+          <div
+            id="sample-tech"
+            class="sample-content hidden grid md:grid-cols-2 gap-6 bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm"
+          >
+            <div class="space-y-3">
+              <div
+                class="flex justify-between items-center pb-2 border-b border-slate-100"
+              >
+                <span
+                  class="text-xs font-bold text-slate-400 uppercase tracking-wider"
+                  >Teks Asli (English UI)</span
+                >
+                <span
+                  class="text-xs bg-slate-100 text-slate-600 px-2 py-0.5 rounded"
+                  >Original</span
+                >
+              </div>
+              <p
+                class="text-slate-700 text-sm leading-relaxed italic bg-slate-50 p-4 rounded-xl border border-slate-100"
+              >
+                "Seamlessly integrate end-to-end encryption into your existing
+                workflow to safeguard sensitive client documents without
+                compromising team collaboration."
+              </p>
+            </div>
+
+            <div class="space-y-3">
+              <div
+                class="flex justify-between items-center pb-2 border-b border-slate-100"
+              >
+                <span
+                  class="text-xs font-bold text-brand-accent uppercase tracking-wider"
+                  >Hasil Lokalisasi (Bahasa Indonesia)</span
+                >
+                <span
+                  class="text-xs bg-blue-50 text-brand-accent px-2 py-0.5 rounded font-semibold"
+                  >Translated</span
+                >
+              </div>
+              <p
+                class="text-slate-800 text-sm leading-relaxed font-medium bg-blue-50/40 p-4 rounded-xl border border-blue-100"
+              >
+                "Integrasikan enkripsi ujung-ke-ujung secara praktis ke dalam
+                alur kerja Anda untuk melindungi dokumen sensitif klien tanpa
+                mengganggu kolaborasi tim."
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Workflow / Process Section -->
+    <section id="proses" class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2
+            class="text-xs font-bold uppercase tracking-widest text-brand-accent mb-2"
+          >
+            Langkah Mudah
+          </h2>
+          <p class="text-3xl font-extrabold text-slate-900">
+            Cara Kerja Pengerjaan Terjemahan
+          </p>
+          <p class="text-slate-600 text-sm mt-2">
+            Proses yang efisien, transparan, dan aman untuk kenyamanan Anda.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-4 gap-8 relative">
+          <!-- Step 1 -->
+          <div class="text-center relative group">
+            <div
+              class="w-16 h-16 rounded-2xl bg-blue-50 border-2 border-brand-accent text-brand-accent font-extrabold text-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-brand-accent group-hover:text-white transition-all shadow-md"
+            >
+              01
+            </div>
+            <h3 class="font-bold text-slate-900 mb-2 text-base">
+              Kirim Dokumen
+            </h3>
+            <p class="text-xs text-slate-500 leading-relaxed">
+              Kirim file dokumen via WA/Email untuk ditinjau jumlah kata dan
+              tingkat kerumitannya.
+            </p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="text-center relative group">
+            <div
+              class="w-16 h-16 rounded-2xl bg-blue-50 border-2 border-brand-accent text-brand-accent font-extrabold text-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-brand-accent group-hover:text-white transition-all shadow-md"
+            >
+              02
+            </div>
+            <h3 class="font-bold text-slate-900 mb-2 text-base">
+              Penawaran & DP
+            </h3>
+            <p class="text-xs text-slate-500 leading-relaxed">
+              Kami berikan invoice estimasi biaya resmi & jadwal pengerjaan yang
+              disepakati.
+            </p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="text-center relative group">
+            <div
+              class="w-16 h-16 rounded-2xl bg-blue-50 border-2 border-brand-accent text-brand-accent font-extrabold text-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-brand-accent group-hover:text-white transition-all shadow-md"
+            >
+              03
+            </div>
+            <h3 class="font-bold text-slate-900 mb-2 text-base">
+              Penerjemahan & QC
+            </h3>
+            <p class="text-xs text-slate-500 leading-relaxed">
+              Penerjemahan mendalam diikuti proses proofreading ganda untuk
+              menjamin mutu.
+            </p>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="text-center relative group">
+            <div
+              class="w-16 h-16 rounded-2xl bg-blue-50 border-2 border-brand-accent text-brand-accent font-extrabold text-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-brand-accent group-hover:text-white transition-all shadow-md"
+            >
+              04
+            </div>
+            <h3 class="font-bold text-slate-900 mb-2 text-base">
+              Penyerahan & Revisi
+            </h3>
+            <p class="text-xs text-slate-500 leading-relaxed">
+              Penerimaan file hasil terjemahan lengkap dengan garansi revisi
+              sepuasnya.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-slate-900 text-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2
+            class="text-xs font-bold uppercase tracking-widest text-brand-cyan mb-2"
+          >
+            Testimoni Klien
+          </h2>
+          <p class="text-3xl font-extrabold">
+            Apa Kata Klien Yang Telah Menggunakan Jasa Kami
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- Testi 1 -->
+          <div
+            class="bg-slate-800/80 p-6 rounded-2xl border border-slate-700/80 flex flex-col justify-between"
+          >
+            <div class="space-y-4">
+              <div class="flex text-amber-400 text-sm gap-1">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+                ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+                ><i class="fa-solid fa-star"></i>
+              </div>
+              <p class="text-slate-300 text-sm leading-relaxed">
+                "Proses terjemahan abstrak jurnal Scopus saya sangat cepat!
+                Bahasa Inggris yang digunakan sangat alami dan akademis.
+                Langsung lolos review perbaikan."
+              </p>
+            </div>
+            <div
+              class="mt-6 pt-4 border-t border-slate-700/60 flex items-center gap-3"
+            >
+              <div
+                class="w-10 h-10 rounded-full bg-brand-accent flex items-center justify-center font-bold text-white text-sm"
+              >
+                DR
+              </div>
+              <div>
+                <h4 class="font-bold text-white text-sm">Dr. Rian Hermawan</h4>
+                <p class="text-xs text-slate-400">Dosen & Peneliti Akademis</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testi 2 -->
+          <div
+            class="bg-slate-800/80 p-6 rounded-2xl border border-slate-700/80 flex flex-col justify-between"
+          >
+            <div class="space-y-4">
+              <div class="flex text-amber-400 text-sm gap-1">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+                ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+                ><i class="fa-solid fa-star"></i>
+              </div>
+              <p class="text-slate-300 text-sm leading-relaxed">
+                "Butuh terjemahan tersumpah untuk Ijazah dan Akta ke Bahasa
+                Jerman secara cepat. Dikerjakan sehari selesai lengkap stempel
+                basah. Recommended!"
+              </p>
+            </div>
+            <div
+              class="mt-6 pt-4 border-t border-slate-700/60 flex items-center gap-3"
+            >
+              <div
+                class="w-10 h-10 rounded-full bg-emerald-600 flex items-center justify-center font-bold text-white text-sm"
+              >
+                S
+              </div>
+              <div>
+                <h4 class="font-bold text-white text-sm">Siti Nurhaliza</h4>
+                <p class="text-xs text-slate-400">Awardee Beasiswa Jerman</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testi 3 -->
+          <div
+            class="bg-slate-800/80 p-6 rounded-2xl border border-slate-700/80 flex flex-col justify-between"
+          >
+            <div class="space-y-4">
+              <div class="flex text-amber-400 text-sm gap-1">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+                ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+                ><i class="fa-solid fa-star"></i>
+              </div>
+              <p class="text-slate-300 text-sm leading-relaxed">
+                "Kerjasama lokalisasi website SaaS perusahaan kami berjalan
+                sangat lancar. Paham terminologi bisnis dan UI/UX digital."
+              </p>
+            </div>
+            <div
+              class="mt-6 pt-4 border-t border-slate-700/60 flex items-center gap-3"
+            >
+              <div
+                class="w-10 h-10 rounded-full bg-purple-600 flex items-center justify-center font-bold text-white text-sm"
+              >
+                BP
+              </div>
+              <div>
+                <h4 class="font-bold text-white text-sm">Budi Pratama</h4>
+                <p class="text-xs text-slate-400">
+                  Product Manager - Tech Startup
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section Accordion -->
+    <section id="faq" class="py-20 bg-slate-50">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-14">
+          <h2
+            class="text-xs font-bold uppercase tracking-widest text-brand-accent mb-2"
+          >
+            Pertanyaan Umum
+          </h2>
+          <p class="text-3xl font-extrabold text-slate-900">
+            Pertanyaan Yang Sering Diajukan (FAQ)
+          </p>
+        </div>
+
+        <div class="space-y-4">
+          <!-- FAQ Item 1 -->
+          <div
+            class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm"
+          >
+            <button
+              class="faq-toggle w-full p-5 text-left font-bold text-slate-800 flex justify-between items-center hover:bg-slate-50 transition-colors"
+            >
+              <span
+                >Apakah hasil penerjemahan tersumpah (sworn) sah secara
+                hukum?</span
+              >
+              <i
+                class="fa-solid fa-chevron-down text-slate-400 text-sm transition-transform duration-300"
+              ></i>
+            </button>
+            <div
+              class="faq-content hidden p-5 pt-0 text-slate-600 text-sm border-t border-slate-100"
+            >
+              Ya, sangat sah. Penerjemahan tersumpah dikerjakan oleh penerjemah
+              yang telah disumpah oleh pejabat berwenang (Kemenkumham/Gubernur)
+              dan dilengkapi cap basah serta tanda tangan resmi yang diakui oleh
+              kedutaan besar, instansi pemerintah, dan lembaga internasional.
+            </div>
+          </div>
+
+          <!-- FAQ Item 2 -->
+          <div
+            class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm"
+          >
+            <button
+              class="faq-toggle w-full p-5 text-left font-bold text-slate-800 flex justify-between items-center hover:bg-slate-50 transition-colors"
+            >
+              <span>Bagaimana jaminan kerahasiaan dokumen (NDA) saya?</span>
+              <i
+                class="fa-solid fa-chevron-down text-slate-400 text-sm transition-transform duration-300"
+              ></i>
+            </button>
+            <div
+              class="faq-content hidden p-5 pt-0 text-slate-600 text-sm border-t border-slate-100"
+            >
+              Kami menjamin 100% kerahasiaan seluruh dokumen Anda. Dokumen tidak
+              akan dibagikan kepada pihak ketiga manapun. Kami juga bersedia
+              menandatangani perjanjian kerahasiaan (Non-Disclosure Agreement /
+              NDA) sebelum pengerjaan dimulai.
+            </div>
+          </div>
+
+          <!-- FAQ Item 3 -->
+          <div
+            class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm"
+          >
+            <button
+              class="faq-toggle w-full p-5 text-left font-bold text-slate-800 flex justify-between items-center hover:bg-slate-50 transition-colors"
+            >
+              <span>Berapa lama waktu pengerjaan penerjemahan?</span>
+              <i
+                class="fa-solid fa-chevron-down text-slate-400 text-sm transition-transform duration-300"
+              ></i>
+            </button>
+            <div
+              class="faq-content hidden p-5 pt-0 text-slate-600 text-sm border-t border-slate-100"
+            >
+              Kecepatan standar pengerjaan adalah sekitar 1.500 - 2.000 kata per
+              hari kerja. Namun, kami juga menyediakan layanan Express
+              (Same-Day) untuk kebutuhan darurat yang diselesaikan dalam waktu
+              kurang dari 24 jam.
+            </div>
+          </div>
+
+          <!-- FAQ Item 4 -->
+          <div
+            class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm"
+          >
+            <button
+              class="faq-toggle w-full p-5 text-left font-bold text-slate-800 flex justify-between items-center hover:bg-slate-50 transition-colors"
+            >
+              <span>Apakah ada garansi revisi jika ada perbaikan?</span>
+              <i
+                class="fa-solid fa-chevron-down text-slate-400 text-sm transition-transform duration-300"
+              ></i>
+            </button>
+            <div
+              class="faq-content hidden p-5 pt-0 text-slate-600 text-sm border-t border-slate-100"
+            >
+              Tentu saja. Kami memberikan garansi revisi gratis dalam rentang
+              waktu 14 hari setelah dokumen diserahkan, selama perbaikan tidak
+              mengubah atau menambah isi dokumen asli awal.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact & Order Form -->
+    <section id="kontak" class="py-20 bg-white border-t border-slate-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-12 gap-12">
+          <!-- Left Info -->
+          <div class="lg:col-span-5 space-y-6">
+            <div>
+              <h2
+                class="text-xs font-bold uppercase tracking-widest text-brand-accent mb-2"
+              >
+                Hubungi Kami
+              </h2>
+              <p class="text-3xl font-extrabold text-slate-900">
+                Siap Membantu Kebutuhan Bahasa Anda
+              </p>
+              <p class="text-slate-600 text-sm mt-3 leading-relaxed">
+                Punya pertanyaan khusus atau ingin berkonsultasi mengenai proyek
+                besar? Jangan ragu untuk menghubungi kami via pesan direct atau
+                formulir.
+              </p>
+            </div>
+
+            <div class="space-y-4 pt-4">
+              <a
+                href="https://wa.me/6281234567890"
+                target="_blank"
+                class="flex items-center gap-4 p-4 rounded-xl bg-slate-50 hover:bg-emerald-50/60 border border-slate-200/80 transition-colors group"
+              >
+                <div
+                  class="w-12 h-12 rounded-xl bg-emerald-500 text-white flex items-center justify-center text-xl shadow-md group-hover:scale-105 transition-transform"
+                >
+                  <i class="fa-brands fa-whatsapp"></i>
+                </div>
+                <div>
+                  <p class="text-xs text-slate-500 font-semibold">
+                    WhatsApp Respon Cepat
+                  </p>
+                  <p class="text-base font-bold text-slate-800">
+                    +62 812-3456-7890
+                  </p>
+                </div>
+              </a>
+
+              <a
+                href="mailto:info@translingo.id"
+                class="flex items-center gap-4 p-4 rounded-xl bg-slate-50 hover:bg-blue-50/60 border border-slate-200/80 transition-colors group"
+              >
+                <div
+                  class="w-12 h-12 rounded-xl bg-brand-accent text-white flex items-center justify-center text-xl shadow-md group-hover:scale-105 transition-transform"
+                >
+                  <i class="fa-regular fa-envelope"></i>
+                </div>
+                <div>
+                  <p class="text-xs text-slate-500 font-semibold">
+                    Email Resmi
+                  </p>
+                  <p class="text-base font-bold text-slate-800">
+                    info@translingo.id
+                  </p>
+                </div>
+              </a>
+
+              <div
+                class="flex items-center gap-4 p-4 rounded-xl bg-slate-50 border border-slate-200/80"
+              >
+                <div
+                  class="w-12 h-12 rounded-xl bg-slate-800 text-white flex items-center justify-center text-xl shadow-md"
+                >
+                  <i class="fa-solid fa-clock"></i>
+                </div>
+                <div>
+                  <p class="text-xs text-slate-500 font-semibold">
+                    Jam Operasional
+                  </p>
+                  <p class="text-sm font-bold text-slate-800">
+                    Senin - Sabtu: 08:00 - 20:00 WIB
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Form -->
+          <div
+            class="lg:col-span-7 bg-slate-50 p-8 sm:p-10 rounded-3xl border border-slate-200/80 shadow-sm"
+          >
+            <h3 class="text-xl font-bold text-slate-900 mb-6">
+              Kirim Pesan & Konsultasi Dokumen
+            </h3>
+
+            <form
+              id="contact-form"
+              onsubmit="handleFormSubmit(event)"
+              class="space-y-5"
+            >
+              <div class="grid sm:grid-cols-2 gap-5">
+                <div>
+                  <label
+                    class="block text-xs font-bold text-slate-700 uppercase mb-2"
+                    >Nama Lengkap *</label
+                  >
+                  <input
+                    type="text"
+                    required
+                    placeholder="Contoh: Budi Santoso"
+                    class="w-full bg-white border border-slate-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-accent"
+                  />
+                </div>
+                <div>
+                  <label
+                    class="block text-xs font-bold text-slate-700 uppercase mb-2"
+                    >Email / No. HP *</label
+                  >
+                  <input
+                    type="text"
+                    required
+                    placeholder="0812xxx atau email@domain.com"
+                    class="w-full bg-white border border-slate-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-accent"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label
+                  class="block text-xs font-bold text-slate-700 uppercase mb-2"
+                  >Jenis Dokumen / Layanan</label
+                >
+                <select
+                  class="w-full bg-white border border-slate-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-accent"
+                >
+                  <option>Dokumen Legal / Sworn</option>
+                  <option>Jurnal & Abstrak Akademis</option>
+                  <option>Lokalisasi Website & Aplikasi</option>
+                  <option>Proofreading & Editing</option>
+                  <option>Lainnya</option>
+                </select>
+              </div>
+
+              <div>
+                <label
+                  class="block text-xs font-bold text-slate-700 uppercase mb-2"
+                  >Pesan atau Link File (Google Drive / Dropbox)</label
+                >
+                <textarea
+                  rows="4"
+                  placeholder="Jelaskan kebutuhan terjemahan Anda, jumlah halaman, dan deadline target..."
+                  class="w-full bg-white border border-slate-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-accent"
+                ></textarea>
+              </div>
+
+              <button
+                type="submit"
+                class="w-full py-4 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-sm shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-2"
+              >
+                <i class="fa-solid fa-paper-plane"></i>
+                <span>Kirim Pesan Konsultasi</span>
+              </button>
+            </form>
+
+            <!-- Alert Box Notification (Replaces native alert) -->
+            <div
+              id="form-alert"
+              class="hidden mt-4 p-4 rounded-xl bg-emerald-100 border border-emerald-300 text-emerald-800 text-xs font-semibold"
+            >
+              <i class="fa-solid fa-circle-check mr-2"></i> Terima kasih! Pesan
+              Anda telah terkirim. Tim kami akan segera menghubungi Anda.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div
+          class="flex flex-col md:flex-row justify-between items-center gap-6"
+        >
+          <div class="flex items-center gap-3">
+            <div
+              class="w-8 h-8 rounded-lg bg-brand-accent flex items-center justify-center text-white font-bold text-sm"
+            >
+              <i class="fa-solid fa-language"></i>
+            </div>
+            <span class="text-lg font-bold text-white tracking-tight"
+              >TransLingo</span
+            >
+          </div>
+
+          <p class="text-xs text-slate-500 text-center">
+            &copy; 2026 TransLingo Translation Services. All rights reserved.
+          </p>
+
+          <div class="flex space-x-5 text-slate-400">
+            <a href="#" class="hover:text-white transition-colors text-lg"
+              ><i class="fa-brands fa-linkedin"></i
+            ></a>
+            <a href="#" class="hover:text-white transition-colors text-lg"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+            <a href="#" class="hover:text-white transition-colors text-lg"
+              ><i class="fa-brands fa-twitter"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript Interactive Code -->
+    <script>
+      // State management for Calculator Unit (Word vs Page)
+      let currentUnit = "word"; // 'word' or 'page'
+
+      // Calculator Logic Elements
+      const langSelect = document.getElementById("calc-language");
+      const serviceSelect = document.getElementById("calc-service");
+      const quantityInput = document.getElementById("calc-quantity");
+      const expressCheckbox = document.getElementById("calc-express");
+
+      const unitWordBtn = document.getElementById("unit-word");
+      const unitPageBtn = document.getElementById("unit-page");
+      const unitLabel = document.getElementById("unit-label");
+
+      const summaryRateBase = document.getElementById("summary-rate-base");
+      const summaryServiceType = document.getElementById(
+        "summary-service-type",
+      );
+      const summaryTime = document.getElementById("summary-time");
+      const totalPriceEl = document.getElementById("total-price");
+      const btnOrderWa = document.getElementById("btn-order-wa");
+
+      // Unit Switcher Event Listeners
+      unitWordBtn.addEventListener("click", () => {
+        currentUnit = "word";
+        unitWordBtn.className =
+          "px-2.5 py-1 rounded-md bg-brand-accent text-white font-medium";
+        unitPageBtn.className =
+          "px-2.5 py-1 rounded-md text-slate-400 hover:text-white font-medium";
+        quantityInput.value = 500;
+        unitLabel.innerText = "Kata (Estimasi ~ 2 Halaman)";
+        calculateEstimate();
+      });
+
+      unitPageBtn.addEventListener("click", () => {
+        currentUnit = "page";
+        unitPageBtn.className =
+          "px-2.5 py-1 rounded-md bg-brand-accent text-white font-medium";
+        unitWordBtn.className =
+          "px-2.5 py-1 rounded-md text-slate-400 hover:text-white font-medium";
+        quantityInput.value = 2;
+        unitLabel.innerText = "Halaman (~250 kata/hal)";
+        calculateEstimate();
+      });
+
+      // Event listeners for recalculation
+      [langSelect, serviceSelect, quantityInput, expressCheckbox].forEach(
+        (el) => {
+          el.addEventListener("input", calculateEstimate);
+          el.addEventListener("change", calculateEstimate);
+        },
+      );
+
+      function calculateEstimate() {
+        const selectedLangOption = langSelect.options[langSelect.selectedIndex];
+        const baseRatePerWord = parseFloat(
+          selectedLangOption.getAttribute("data-rate"),
+        );
+
+        const selectedServiceOption =
+          serviceSelect.options[serviceSelect.selectedIndex];
+        const multiplier = parseFloat(
+          selectedServiceOption.getAttribute("data-multiplier"),
+        );
+
+        let rawQty = parseFloat(quantityInput.value) || 0;
+        if (rawQty < 1) rawQty = 1;
+
+        // Normalize quantity to Word Count
+        let wordCount = currentUnit === "page" ? rawQty * 250 : rawQty;
+
+        // Calculate total price
+        let total = wordCount * baseRatePerWord * multiplier;
+
+        // Express Surcharge
+        const isExpress = expressCheckbox.checked;
+        if (isExpress) {
+          total *= 1.3; // +30%
+        }
+
+        // Rounding up to nearest thousand for clean IDR display
+        total = Math.ceil(total / 1000) * 1000;
+
+        // Format Currency
+        const formattedTotal = new Intl.NumberFormat("id-ID", {
+          style: "currency",
+          currency: "IDR",
+          maximumFractionDigits: 0,
+        }).format(total);
+
+        // Update UI elements
+        totalPriceEl.innerText = formattedTotal;
+        summaryRateBase.innerText = `Rp ${baseRatePerWord} / kata`;
+        summaryServiceType.innerText = selectedServiceOption.text
+          .split("(")[0]
+          .trim();
+
+        // Estimate Time Calculation
+        let days = Math.ceil(wordCount / 1500);
+        if (isExpress) {
+          summaryTime.innerText = "Same-Day / Maks 24 Jam";
+          summaryTime.className = "font-semibold text-amber-400";
+        } else {
+          summaryTime.innerText = `${days} - ${days + 1} Hari Kerja`;
+          summaryTime.className = "font-semibold text-emerald-400";
+        }
+
+        // Update WhatsApp CTA URL with dynamic pre-filled message
+        const langText = selectedLangOption.text.split("(")[0].trim();
+        const serviceText = selectedServiceOption.text.split("(")[0].trim();
+        const expressText = isExpress ? " (LAYANAN EXPRESS)" : "";
+
+        const waMessage = `Halo TransLingo, saya ingin memesan terjemahan:${expressText}\n\n- Bahasa: ${langText}\n- Tipe: ${serviceText}\n- Jumlah: ${rawQty} ${currentUnit === "word" ? "Kata" : "Halaman"}\n- Estimasi Biaya: ${formattedTotal}\n\nMohon informasi selanjutnya. Terima kasih!`;
+
+        btnOrderWa.onclick = () => {
+          window.open(
+            `https://wa.me/6281234567890?text=${encodeURIComponent(waMessage)}`,
+            "_blank",
+          );
+        };
+      }
+
+      // Initialize calculation on load
+      calculateEstimate();
+
+      // Sample Tab Switching Logic
+      function switchTab(tabName) {
+        document.querySelectorAll(".tab-btn").forEach((btn) => {
+          btn.classList.remove("bg-brand-accent", "text-white", "shadow-md");
+          btn.classList.add("bg-white", "text-slate-600");
+        });
+
+        document.querySelectorAll(".sample-content").forEach((card) => {
+          card.classList.add("hidden");
+        });
+
+        const activeBtn = document.getElementById(`tab-${tabName}`);
+        activeBtn.classList.remove("bg-white", "text-slate-600");
+        activeBtn.classList.add("bg-brand-accent", "text-white", "shadow-md");
+
+        const activeSample = document.getElementById(`sample-${tabName}`);
+        if (activeSample) {
+          activeSample.classList.remove("hidden");
+        }
+      }
+
+      // FAQ Accordion Logic
+      document.querySelectorAll(".faq-toggle").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const content = btn.nextElementSibling;
+          const icon = btn.querySelector("i");
+
+          const isOpen = !content.classList.contains("hidden");
+
+          // Close all FAQs
+          document
+            .querySelectorAll(".faq-content")
+            .forEach((c) => c.classList.add("hidden"));
+          document
+            .querySelectorAll(".faq-toggle i")
+            .forEach((i) => i.classList.remove("rotate-180"));
+
+          // Toggle selected
+          if (!isOpen) {
+            content.classList.remove("hidden");
+            icon.classList.add("rotate-180");
+          }
+        });
+      });
+
+      // Mobile Menu Toggle
+      const mobileBtn = document.getElementById("mobile-menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const menuIcon = document.getElementById("menu-icon");
+
+      mobileBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+        if (mobileMenu.classList.contains("hidden")) {
+          menuIcon.className = "fa-solid fa-bars text-2xl";
+        } else {
+          menuIcon.className = "fa-solid fa-xmark text-2xl";
+        }
+      });
+
+      // Form Submit Handler
+      function handleFormSubmit(e) {
+        e.preventDefault();
+        const alertBox = document.getElementById("form-alert");
+        alertBox.classList.remove("hidden");
+        document.getElementById("contact-form").reset();
+        setTimeout(() => {
+          alertBox.classList.add("hidden");
+        }, 5000);
+      }
+    </script>
+  </body>
+</html>
