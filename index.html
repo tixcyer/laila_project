@@ -1,637 +1,1197 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id" class="scroll-smooth">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LingoKampus - Jasa Terjemah Abstrak, Skripsi & Interpreting Mahasiswa</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      LYRA.CO - Jasa Terjemah Abstrak, Skripsi & Interpreting Mahasiswa
+    </title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        brand: {
-                            50: '#f0fdf4',
-                            100: '#dcfce7',
-                            500: '#10b981',
-                            600: '#059669',
-                            700: '#047857',
-                        },
-                        indigoCustom: {
-                            50: '#eef2ff',
-                            100: '#e0e7ff',
-                            600: '#4f46e5',
-                            700: '#4338ca',
-                            900: '#312e81',
-                        }
-                    },
-                    fontFamily: {
-                        sans: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
-                    }
-                }
-            }
-        }
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                50: "#f0fdf4",
+                100: "#dcfce7",
+                500: "#10b981",
+                600: "#059669",
+                700: "#047857",
+              },
+              indigoCustom: {
+                50: "#eef2ff",
+                100: "#e0e7ff",
+                600: "#4f46e5",
+                700: "#4338ca",
+                900: "#312e81",
+              },
+            },
+            fontFamily: {
+              sans: ["Plus Jakarta Sans", "Inter", "sans-serif"],
+            },
+          },
+        },
+      };
     </script>
     <!-- Font Awesome & Google Fonts -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
     <style>
-        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+      body {
+        font-family: "Plus Jakarta Sans", sans-serif;
+      }
     </style>
-</head>
-<body class="bg-slate-50 text-slate-800 antialiased">
-
+  </head>
+  <body class="bg-slate-50 text-slate-800 antialiased">
     <!-- 1. NAVBAR -->
-    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200 shadow-sm">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-16 sm:h-20">
-                <!-- Logo -->
-                <a href="#" class="flex items-center space-x-2.5">
-                    <div class="w-10 h-10 rounded-xl bg-indigoCustom-600 flex items-center justify-center text-white font-bold text-xl shadow-md">
-                        <i class="fa-solid fa-graduation-cap"></i>
-                    </div>
-                    <div>
-                        <span class="text-xl font-extrabold tracking-tight text-slate-900 block leading-none">Lingo<span class="text-indigoCustom-600">Kampus</span></span>
-                        <span class="text-[10px] text-slate-500 font-semibold tracking-wider block mt-1">Translator & Partner Mahasiswa</span>
-                    </div>
-                </a>
-
-                <!-- Desktop Nav -->
-                <nav class="hidden md:flex space-x-6 text-sm font-semibold text-slate-600">
-                    <a href="#layanan" class="hover:text-indigoCustom-600 transition-colors">Layanan</a>
-                    <a href="#kalkulator" class="hover:text-indigoCustom-600 transition-colors">Kalkulator Kantong</a>
-                    <a href="#portofolio" class="hover:text-indigoCustom-600 transition-colors">Contoh Hasil</a>
-                    <a href="#testimoni" class="hover:text-indigoCustom-600 transition-colors">Kata Teman</a>
-                    <a href="#faq" class="hover:text-indigoCustom-600 transition-colors">FAQ</a>
-                </nav>
-
-                <!-- CTA Quick Whatsapp -->
-                <div class="hidden sm:flex items-center space-x-3">
-                    <a href="https://wa.me/628123456789?text=Halo%20LingoKampus,%20mau%20tanya%20terjemah%20abstrak/skripsi%20dong!" target="_blank" class="bg-emerald-500 hover:bg-emerald-600 text-white px-4 py-2.5 rounded-xl font-bold text-xs sm:text-sm flex items-center shadow-md transition-all hover:scale-105">
-                        <i class="fa-brands fa-whatsapp text-base mr-2"></i> Tanya via WA
-                    </a>
-                </div>
-
-                <!-- Mobile menu button -->
-                <button onclick="toggleMobileMenu()" class="md:hidden text-slate-600 p-2 focus:outline-none">
-                    <i class="fa-solid fa-bars text-xl"></i>
-                </button>
+    <header
+      class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200 shadow-sm"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16 sm:h-20">
+          <!-- Logo -->
+          <a href="#" class="flex items-center space-x-2.5">
+            <div
+              class="w-10 h-10 rounded-xl bg-indigoCustom-600 flex items-center justify-center text-white font-bold text-xl shadow-md"
+            >
+              <i class="fa-solid fa-graduation-cap"></i>
             </div>
-        </div>
+            <div>
+              <span
+                class="text-xl font-extrabold tracking-tight text-slate-900 block leading-none"
+                >LYRA<span class="text-indigoCustom-600">.CO</span></span
+              >
+              <span
+                class="text-[10px] text-slate-500 font-semibold tracking-wider block mt-1"
+                >Translator & Partner Mahasiswa</span
+              >
+            </div>
+          </a>
 
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-6 space-y-3">
-            <a href="#layanan" onclick="toggleMobileMenu()" class="block text-slate-700 font-medium py-2 border-b border-slate-100">Layanan Mahasiswa</a>
-            <a href="#kalkulator" onclick="toggleMobileMenu()" class="block text-slate-700 font-medium py-2 border-b border-slate-100">Kalkulator Harga</a>
-            <a href="#portofolio" onclick="toggleMobileMenu()" class="block text-slate-700 font-medium py-2 border-b border-slate-100">Contoh Hasil Terjemah</a>
-            <a href="#testimoni" onclick="toggleMobileMenu()" class="block text-slate-700 font-medium py-2 border-b border-slate-100">Testimoni Teman Kampus</a>
-            <a href="#faq" onclick="toggleMobileMenu()" class="block text-slate-700 font-medium py-2 border-b border-slate-100">FAQ & Garansi Revisi</a>
-            <a href="https://wa.me/628123456789" target="_blank" class="w-full mt-2 bg-emerald-500 text-white py-2.5 rounded-xl text-center font-bold flex items-center justify-center text-sm">
-                <i class="fa-brands fa-whatsapp text-lg mr-2"></i> Chat WA Langsung
+          <!-- Desktop Nav -->
+          <nav
+            class="hidden md:flex space-x-6 text-sm font-semibold text-slate-600"
+          >
+            <a
+              href="#layanan"
+              class="hover:text-indigoCustom-600 transition-colors"
+              >Layanan</a
+            >
+            <a
+              href="#kalkulator"
+              class="hover:text-indigoCustom-600 transition-colors"
+              >Kalkulator Kantong</a
+            >
+            <a
+              href="#portofolio"
+              class="hover:text-indigoCustom-600 transition-colors"
+              >Contoh Hasil</a
+            >
+            <a
+              href="#testimoni"
+              class="hover:text-indigoCustom-600 transition-colors"
+              >Kata Teman</a
+            >
+            <a
+              href="#kontak"
+              class="hover:text-indigoCustom-600 transition-colors"
+              >Kontak</a
+            >
+            <a href="#faq" class="hover:text-indigoCustom-600 transition-colors"
+              >FAQ</a
+            >
+          </nav>
+
+          <!-- CTA Quick Whatsapp -->
+          <div class="hidden sm:flex items-center space-x-3">
+            <a
+              href="https://wa.me/6283833843944?text=Halo%20LYRA.CO,%20mau%20tanya%20terjemah%20abstrak/skripsi%20dong!"
+              target="_blank"
+              class="bg-emerald-500 hover:bg-emerald-600 text-white px-4 py-2.5 rounded-xl font-bold text-xs sm:text-sm flex items-center shadow-md transition-all hover:scale-105"
+            >
+              <i class="fa-brands fa-whatsapp text-base mr-2"></i> Tanya via WA
             </a>
+          </div>
+
+          <!-- Mobile menu button -->
+          <button
+            onclick="toggleMobileMenu()"
+            class="md:hidden text-slate-600 p-2 focus:outline-none"
+          >
+            <i class="fa-solid fa-bars text-xl"></i>
+          </button>
         </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-6 space-y-3"
+      >
+        <a
+          href="#layanan"
+          onclick="toggleMobileMenu()"
+          class="block text-slate-700 font-medium py-2 border-b border-slate-100"
+          >Layanan Mahasiswa</a
+        >
+        <a
+          href="#kalkulator"
+          onclick="toggleMobileMenu()"
+          class="block text-slate-700 font-medium py-2 border-b border-slate-100"
+          >Kalkulator Harga</a
+        >
+        <a
+          href="#portofolio"
+          onclick="toggleMobileMenu()"
+          class="block text-slate-700 font-medium py-2 border-b border-slate-100"
+          >Contoh Hasil Terjemah</a
+        >
+        <a
+          href="#testimoni"
+          onclick="toggleMobileMenu()"
+          class="block text-slate-700 font-medium py-2 border-b border-slate-100"
+          >Testimoni Teman Kampus</a
+        >
+        <a
+          href="#kontak"
+          onclick="toggleMobileMenu()"
+          class="block text-slate-700 font-medium py-2 border-b border-slate-100"
+          >Kontak</a
+        >
+        <a
+          href="#faq"
+          onclick="toggleMobileMenu()"
+          class="block text-slate-700 font-medium py-2 border-b border-slate-100"
+          >FAQ & Garansi Revisi</a
+        >
+        <a
+          href="https://wa.me/6283833843944"
+          target="_blank"
+          class="w-full mt-2 bg-emerald-500 text-white py-2.5 rounded-xl text-center font-bold flex items-center justify-center text-sm"
+        >
+          <i class="fa-brands fa-whatsapp text-lg mr-2"></i> Chat WA Langsung
+        </a>
+      </div>
     </header>
 
     <!-- 2. HERO SECTION -->
-    <section class="relative bg-gradient-to-b from-indigoCustom-50 via-white to-slate-50 py-12 lg:py-20 overflow-hidden">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid lg:grid-cols-12 gap-12 items-center">
-                
-                <!-- Left Content -->
-                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
-                    <div class="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full bg-indigoCustom-100 text-indigoCustom-700 text-xs sm:text-sm font-bold">
-                        <i class="fa-solid fa-bolt text-amber-500"></i>
-                        <span>Bantu Cepat Kelar Skripsi & Sidang!</span>
-                    </div>
-
-                    <h1 class="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
-                        Jasa Terjemah & Partner Bahasa <br class="hidden sm:inline">
-                        <span class="text-indigoCustom-600">Khusus Kantong Mahasiswa</span>
-                    </h1>
-
-                    <p class="text-slate-600 text-sm sm:text-base max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-                        Nggak usah pusing terjemahin abstrak skripsi, jurnal Scopus, atau latihan wawancara beasiswa. Dikerjakan oleh lulusan Sastra & Alumni Bebas Plagiarisme, harga pas di dompet anak kos!
-                    </p>
-
-                    <!-- Fast Perks Grid -->
-                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-2 text-left max-w-lg mx-auto lg:mx-0">
-                        <div class="bg-white p-3 rounded-xl border border-slate-200 shadow-sm flex items-center space-x-2">
-                            <i class="fa-solid fa-clock-rotate-left text-indigoCustom-600 text-base"></i>
-                            <span class="text-xs font-bold text-slate-700">Abstrak 1x24 Jam</span>
-                        </div>
-                        <div class="bg-white p-3 rounded-xl border border-slate-200 shadow-sm flex items-center space-x-2">
-                            <i class="fa-solid fa-rotate-left text-emerald-600 text-base"></i>
-                            <span class="text-xs font-bold text-slate-700">Gratis Revisi</span>
-                        </div>
-                        <div class="bg-white p-3 rounded-xl border border-slate-200 shadow-sm flex items-center space-x-2 col-span-2 sm:col-span-1">
-                            <i class="fa-solid fa-wallet text-amber-500 text-base"></i>
-                            <span class="text-xs font-bold text-slate-700">Mulai 15rb/Halaman</span>
-                        </div>
-                    </div>
-
-                    <!-- CTA Buttons -->
-                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 pt-4">
-                        <a href="#kalkulator" class="w-full sm:w-auto bg-indigoCustom-600 hover:bg-indigoCustom-700 text-white font-bold px-6 py-3.5 rounded-xl shadow-lg shadow-indigoCustom-600/20 transition-all text-center flex items-center justify-center text-sm">
-                            <i class="fa-solid fa-calculator mr-2"></i> Hitung Biaya Dulu
-                        </a>
-                        <a href="#order" class="w-full sm:w-auto bg-white hover:bg-slate-100 text-slate-700 border border-slate-300 font-bold px-6 py-3.5 rounded-xl transition-all text-center flex items-center justify-center text-sm">
-                            <i class="fa-solid fa-file-arrow-up mr-2 text-indigoCustom-600"></i> Kirim File Abstrak
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Right Card Graphic -->
-                <div class="lg:col-span-5">
-                    <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-xl space-y-4 relative">
-                        <div class="flex items-center justify-between border-b border-slate-100 pb-3">
-                            <span class="text-xs font-bold text-slate-400 uppercase tracking-wider"><i class="fa-solid fa-file-lines text-indigoCustom-600 mr-1"></i> Preview Orderan Mahasiswa</span>
-                            <span class="bg-emerald-100 text-emerald-800 text-[10px] font-extrabold px-2 py-0.5 rounded-full">Siap Kirim Dosen</span>
-                        </div>
-
-                        <!-- Before & After Mini Visual -->
-                        <div class="space-y-3 text-xs">
-                            <div class="p-3 bg-slate-50 rounded-xl border border-slate-200">
-                                <p class="text-[10px] font-bold text-slate-400 uppercase mb-1">Sebelum (Bahasa Indonesia):</p>
-                                <p class="text-slate-700 italic">"Penelitian ini bertujuan untuk mengetahui pengaruh penggunaan media sosial terhadap motivasi belajar..."</p>
-                            </div>
-                            <div class="flex justify-center text-indigoCustom-600">
-                                <i class="fa-solid fa-arrow-down-long"></i>
-                            </div>
-                            <div class="p-3 bg-indigoCustom-50 rounded-xl border border-indigoCustom-100">
-                                <p class="text-[10px] font-bold text-indigoCustom-600 uppercase mb-1">Hasil Terjemah (English Academic):</p>
-                                <p class="text-slate-800 font-semibold">"This study aims to investigate the impact of social media usage on students' learning motivation..."</p>
-                            </div>
-                        </div>
-
-                        <div class="pt-2 flex items-center justify-between text-[11px] text-slate-500 font-medium">
-                            <span><i class="fa-solid fa-check-double text-emerald-500 mr-1"></i> Tata Bahasa Akademik Lolos Turnitin</span>
-                        </div>
-                    </div>
-                </div>
-
+    <section
+      class="relative bg-gradient-to-b from-indigoCustom-50 via-white to-slate-50 py-12 lg:py-20 overflow-hidden"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-12 gap-12 items-center">
+          <!-- Left Content -->
+          <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+            <div
+              class="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full bg-indigoCustom-100 text-indigoCustom-700 text-xs sm:text-sm font-bold"
+            >
+              <i class="fa-solid fa-bolt text-amber-500"></i>
+              <span>Bantu Cepat Kelar Skripsi & Sidang!</span>
             </div>
+
+            <h1
+              class="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight"
+            >
+              Jasa Terjemah & Partner Bahasa <br class="hidden sm:inline" />
+              <span class="text-indigoCustom-600"
+                >Khusus Kantong Mahasiswa</span
+              >
+            </h1>
+
+            <p
+              class="text-slate-600 text-sm sm:text-base max-w-2xl mx-auto lg:mx-0 leading-relaxed"
+            >
+              Nggak usah pusing terjemahin abstrak skripsi, jurnal Scopus, atau
+              latihan wawancara beasiswa. Dikerjakan oleh lulusan Sastra &
+              Alumni Bebas Plagiarisme, harga pas di dompet anak kos!
+            </p>
+
+            <!-- Fast Perks Grid -->
+            <div
+              class="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-2 text-left max-w-lg mx-auto lg:mx-0"
+            >
+              <div
+                class="bg-white p-3 rounded-xl border border-slate-200 shadow-sm flex items-center space-x-2"
+              >
+                <i
+                  class="fa-solid fa-clock-rotate-left text-indigoCustom-600 text-base"
+                ></i>
+                <span class="text-xs font-bold text-slate-700"
+                  >Abstrak 1x24 Jam</span
+                >
+              </div>
+              <div
+                class="bg-white p-3 rounded-xl border border-slate-200 shadow-sm flex items-center space-x-2"
+              >
+                <i
+                  class="fa-solid fa-rotate-left text-emerald-600 text-base"
+                ></i>
+                <span class="text-xs font-bold text-slate-700"
+                  >Gratis Revisi</span
+                >
+              </div>
+              <div
+                class="bg-white p-3 rounded-xl border border-slate-200 shadow-sm flex items-center space-x-2 col-span-2 sm:col-span-1"
+              >
+                <i class="fa-solid fa-wallet text-amber-500 text-base"></i>
+                <span class="text-xs font-bold text-slate-700"
+                  >Mulai 15rb/Halaman</span
+                >
+              </div>
+            </div>
+
+            <!-- CTA Buttons -->
+            <div
+              class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 pt-4"
+            >
+              <a
+                href="#kalkulator"
+                class="w-full sm:w-auto bg-indigoCustom-600 hover:bg-indigoCustom-700 text-white font-bold px-6 py-3.5 rounded-xl shadow-lg shadow-indigoCustom-600/20 transition-all text-center flex items-center justify-center text-sm"
+              >
+                <i class="fa-solid fa-calculator mr-2"></i> Hitung Biaya Dulu
+              </a>
+              <a
+                href="#order"
+                class="w-full sm:w-auto bg-white hover:bg-slate-100 text-slate-700 border border-slate-300 font-bold px-6 py-3.5 rounded-xl transition-all text-center flex items-center justify-center text-sm"
+              >
+                <i
+                  class="fa-solid fa-file-arrow-up mr-2 text-indigoCustom-600"
+                ></i>
+                Kirim File Abstrak
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Card Graphic -->
+          <div class="lg:col-span-5">
+            <div
+              class="bg-white rounded-2xl p-6 border border-slate-200 shadow-xl space-y-4 relative"
+            >
+              <div
+                class="flex items-center justify-between border-b border-slate-100 pb-3"
+              >
+                <span
+                  class="text-xs font-bold text-slate-400 uppercase tracking-wider"
+                  ><i
+                    class="fa-solid fa-file-lines text-indigoCustom-600 mr-1"
+                  ></i>
+                  Preview Orderan Mahasiswa</span
+                >
+                <span
+                  class="bg-emerald-100 text-emerald-800 text-[10px] font-extrabold px-2 py-0.5 rounded-full"
+                  >Siap Kirim Dosen</span
+                >
+              </div>
+
+              <!-- Before & After Mini Visual -->
+              <div class="space-y-3 text-xs">
+                <div class="p-3 bg-slate-50 rounded-xl border border-slate-200">
+                  <p
+                    class="text-[10px] font-bold text-slate-400 uppercase mb-1"
+                  >
+                    Sebelum (Bahasa Indonesia):
+                  </p>
+                  <p class="text-slate-700 italic">
+                    "Penelitian ini bertujuan untuk mengetahui pengaruh
+                    penggunaan media sosial terhadap motivasi belajar..."
+                  </p>
+                </div>
+                <div class="flex justify-center text-indigoCustom-600">
+                  <i class="fa-solid fa-arrow-down-long"></i>
+                </div>
+                <div
+                  class="p-3 bg-indigoCustom-50 rounded-xl border border-indigoCustom-100"
+                >
+                  <p
+                    class="text-[10px] font-bold text-indigoCustom-600 uppercase mb-1"
+                  >
+                    Hasil Terjemah (English Academic):
+                  </p>
+                  <p class="text-slate-800 font-semibold">
+                    "This study aims to investigate the impact of social media
+                    usage on students' learning motivation..."
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="pt-2 flex items-center justify-between text-[11px] text-slate-500 font-medium"
+              >
+                <span
+                  ><i
+                    class="fa-solid fa-check-double text-emerald-500 mr-1"
+                  ></i>
+                  Tata Bahasa Akademik Lolos Turnitin</span
+                >
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- 3. LAYANAN KAMI (KHUSUS KEBUTUHAN KAMPUS) -->
     <section id="layanan" class="py-16 bg-white border-y border-slate-200">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-2xl mx-auto mb-12">
-                <span class="text-xs font-bold text-indigoCustom-600 uppercase tracking-widest">Pilih Yang Kamu Butuhin</span>
-                <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-1">Layanan Lengkap Buat Tugas & Skripsi</h2>
-                <p class="text-slate-600 text-sm mt-2">Nggak perlu ribet, pilih layanan yang paling sesuai sama deadline kamu.</p>
-            </div>
-
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                
-                <!-- Service 1 -->
-                <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200 hover:border-indigoCustom-600 transition-all flex flex-col justify-between group">
-                    <div>
-                        <div class="w-12 h-12 bg-indigoCustom-100 text-indigoCustom-600 rounded-xl flex items-center justify-center text-xl mb-4 group-hover:bg-indigoCustom-600 group-hover:text-white transition-colors">
-                            <i class="fa-solid fa-file-contract"></i>
-                        </div>
-                        <h3 class="font-bold text-slate-900 text-base mb-2">Terjemah Abstrak Skripsi</h3>
-                        <p class="text-slate-600 text-xs leading-relaxed mb-4">
-                            Khusus penerjemahan abstrak Bahasa Indonesia ke Bahasa Inggris Akademik formal. Cepat, akurat, & siap tempel di laporan akhir.
-                        </p>
-                    </div>
-                    <div class="border-t border-slate-200 pt-3">
-                        <span class="text-xs font-extrabold text-indigoCustom-600 block mb-2">Mulai Rp 35.000 / Abstrak</span>
-                        <a href="#order" class="text-xs font-bold text-slate-700 group-hover:text-indigoCustom-600 flex items-center">Pesan Abstrak <i class="fa-solid fa-chevron-right text-[10px] ml-1"></i></a>
-                    </div>
-                </div>
-
-                <!-- Service 2 -->
-                <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200 hover:border-indigoCustom-600 transition-all flex flex-col justify-between group">
-                    <div>
-                        <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-xl flex items-center justify-center text-xl mb-4 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
-                            <i class="fa-solid fa-book-open-reader"></i>
-                        </div>
-                        <h3 class="font-bold text-slate-900 text-base mb-2">Terjemah Jurnal & Artikel</h3>
-                        <p class="text-slate-600 text-xs leading-relaxed mb-4">
-                            Penerjemahan jurnal acuan referensi tugas kuliah atau draft artikel ilmiah yang mau kamu submit ke jurnal internasional.
-                        </p>
-                    </div>
-                    <div class="border-t border-slate-200 pt-3">
-                        <span class="text-xs font-extrabold text-emerald-600 block mb-2">Mulai Rp 15.000 / Halaman</span>
-                        <a href="#order" class="text-xs font-bold text-slate-700 group-hover:text-emerald-600 flex items-center">Pesan Terjemah Jurnal <i class="fa-solid fa-chevron-right text-[10px] ml-1"></i></a>
-                    </div>
-                </div>
-
-                <!-- Service 3 -->
-                <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200 hover:border-indigoCustom-600 transition-all flex flex-col justify-between group">
-                    <div>
-                        <div class="w-12 h-12 bg-amber-100 text-amber-600 rounded-xl flex items-center justify-center text-xl mb-4 group-hover:bg-amber-500 group-hover:text-white transition-colors">
-                            <i class="fa-solid fa-comments"></i>
-                        </div>
-                        <h3 class="font-bold text-slate-900 text-base mb-2">Latihan Presentasi & Wawancara</h3>
-                        <p class="text-slate-600 text-xs leading-relaxed mb-4">
-                            Partner pendamping (Interpreting/Speaking Partner) untuk simulasi sidang skripsi bahasa Inggris atau wawancara beasiswa (IISMA/LPDP).
-                        </p>
-                    </div>
-                    <div class="border-t border-slate-200 pt-3">
-                        <span class="text-xs font-extrabold text-amber-600 block mb-2">Mulai Rp 50.000 / Sesi (30m)</span>
-                        <a href="#order" class="text-xs font-bold text-slate-700 group-hover:text-amber-600 flex items-center">Sewa Partner Bicara <i class="fa-solid fa-chevron-right text-[10px] ml-1"></i></a>
-                    </div>
-                </div>
-
-                <!-- Service 4 -->
-                <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200 hover:border-indigoCustom-600 transition-all flex flex-col justify-between group">
-                    <div>
-                        <div class="w-12 h-12 bg-purple-100 text-purple-600 rounded-xl flex items-center justify-center text-xl mb-4 group-hover:bg-purple-600 group-hover:text-white transition-colors">
-                            <i class="fa-solid fa-pen-to-square"></i>
-                        </div>
-                        <h3 class="font-bold text-slate-900 text-base mb-2">Proofreading & Cek Grammar</h3>
-                        <p class="text-slate-600 text-xs leading-relaxed mb-4">
-                            Sudah punya tulisan tapi ragu sama tata bahasanya? Kami bantu rapihin struktur kalimat, ejaan, dan alur tulisan ilmiah kamu.
-                        </p>
-                    </div>
-                    <div class="border-t border-slate-200 pt-3">
-                        <span class="text-xs font-extrabold text-purple-600 block mb-2">Mulai Rp 10.000 / Halaman</span>
-                        <a href="#order" class="text-xs font-bold text-slate-700 group-hover:text-purple-600 flex items-center">Pesan Proofreading <i class="fa-solid fa-chevron-right text-[10px] ml-1"></i></a>
-                    </div>
-                </div>
-
-            </div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+          <span
+            class="text-xs font-bold text-indigoCustom-600 uppercase tracking-widest"
+            >Pilih Yang Kamu Butuhin</span
+          >
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-1">
+            Layanan Lengkap Buat Tugas & Skripsi
+          </h2>
+          <p class="text-slate-600 text-sm mt-2">
+            Nggak perlu ribet, pilih layanan yang paling sesuai sama deadline
+            kamu.
+          </p>
         </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Service 1 -->
+          <div
+            class="bg-slate-50 rounded-2xl p-6 border border-slate-200 hover:border-indigoCustom-600 transition-all flex flex-col justify-between group"
+          >
+            <div>
+              <div
+                class="w-12 h-12 bg-indigoCustom-100 text-indigoCustom-600 rounded-xl flex items-center justify-center text-xl mb-4 group-hover:bg-indigoCustom-600 group-hover:text-white transition-colors"
+              >
+                <i class="fa-solid fa-file-contract"></i>
+              </div>
+              <h3 class="font-bold text-slate-900 text-base mb-2">
+                Terjemah Abstrak Skripsi
+              </h3>
+              <p class="text-slate-600 text-xs leading-relaxed mb-4">
+                Khusus penerjemahan abstrak Bahasa Indonesia ke Bahasa Inggris
+                Akademik formal. Cepat, akurat, & siap tempel di laporan akhir.
+              </p>
+            </div>
+            <div class="border-t border-slate-200 pt-3">
+              <span
+                class="text-xs font-extrabold text-indigoCustom-600 block mb-2"
+                >Mulai Rp 35.000 / Abstrak</span
+              >
+              <a
+                href="#order"
+                class="text-xs font-bold text-slate-700 group-hover:text-indigoCustom-600 flex items-center"
+                >Pesan Abstrak
+                <i class="fa-solid fa-chevron-right text-[10px] ml-1"></i
+              ></a>
+            </div>
+          </div>
+
+          <!-- Service 2 -->
+          <div
+            class="bg-slate-50 rounded-2xl p-6 border border-slate-200 hover:border-indigoCustom-600 transition-all flex flex-col justify-between group"
+          >
+            <div>
+              <div
+                class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-xl flex items-center justify-center text-xl mb-4 group-hover:bg-emerald-600 group-hover:text-white transition-colors"
+              >
+                <i class="fa-solid fa-book-open-reader"></i>
+              </div>
+              <h3 class="font-bold text-slate-900 text-base mb-2">
+                Terjemah Jurnal & Artikel
+              </h3>
+              <p class="text-slate-600 text-xs leading-relaxed mb-4">
+                Penerjemahan jurnal acuan referensi tugas kuliah atau draft
+                artikel ilmiah yang mau kamu submit ke jurnal internasional.
+              </p>
+            </div>
+            <div class="border-t border-slate-200 pt-3">
+              <span class="text-xs font-extrabold text-emerald-600 block mb-2"
+                >Mulai Rp 15.000 / Halaman</span
+              >
+              <a
+                href="#order"
+                class="text-xs font-bold text-slate-700 group-hover:text-emerald-600 flex items-center"
+                >Pesan Terjemah Jurnal
+                <i class="fa-solid fa-chevron-right text-[10px] ml-1"></i
+              ></a>
+            </div>
+          </div>
+
+          <!-- Service 3 -->
+          <div
+            class="bg-slate-50 rounded-2xl p-6 border border-slate-200 hover:border-indigoCustom-600 transition-all flex flex-col justify-between group"
+          >
+            <div>
+              <div
+                class="w-12 h-12 bg-amber-100 text-amber-600 rounded-xl flex items-center justify-center text-xl mb-4 group-hover:bg-amber-500 group-hover:text-white transition-colors"
+              >
+                <i class="fa-solid fa-comments"></i>
+              </div>
+              <h3 class="font-bold text-slate-900 text-base mb-2">
+                Latihan Presentasi & Wawancara
+              </h3>
+              <p class="text-slate-600 text-xs leading-relaxed mb-4">
+                Partner pendamping (Interpreting/Speaking Partner) untuk
+                simulasi sidang skripsi bahasa Inggris atau wawancara beasiswa
+                (IISMA/LPDP).
+              </p>
+            </div>
+            <div class="border-t border-slate-200 pt-3">
+              <span class="text-xs font-extrabold text-amber-600 block mb-2"
+                >Mulai Rp 50.000 / Sesi (30m)</span
+              >
+              <a
+                href="#order"
+                class="text-xs font-bold text-slate-700 group-hover:text-amber-600 flex items-center"
+                >Sewa Partner Bicara
+                <i class="fa-solid fa-chevron-right text-[10px] ml-1"></i
+              ></a>
+            </div>
+          </div>
+
+          <!-- Service 4 -->
+          <div
+            class="bg-slate-50 rounded-2xl p-6 border border-slate-200 hover:border-indigoCustom-600 transition-all flex flex-col justify-between group"
+          >
+            <div>
+              <div
+                class="w-12 h-12 bg-purple-100 text-purple-600 rounded-xl flex items-center justify-center text-xl mb-4 group-hover:bg-purple-600 group-hover:text-white transition-colors"
+              >
+                <i class="fa-solid fa-pen-to-square"></i>
+              </div>
+              <h3 class="font-bold text-slate-900 text-base mb-2">
+                Proofreading & Cek Grammar
+              </h3>
+              <p class="text-slate-600 text-xs leading-relaxed mb-4">
+                Sudah punya tulisan tapi ragu sama tata bahasanya? Kami bantu
+                rapihin struktur kalimat, ejaan, dan alur tulisan ilmiah kamu.
+              </p>
+            </div>
+            <div class="border-t border-slate-200 pt-3">
+              <span class="text-xs font-extrabold text-purple-600 block mb-2"
+                >Mulai Rp 10.000 / Halaman</span
+              >
+              <a
+                href="#order"
+                class="text-xs font-bold text-slate-700 group-hover:text-purple-600 flex items-center"
+                >Pesan Proofreading
+                <i class="fa-solid fa-chevron-right text-[10px] ml-1"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- 4. KALKULATOR HARGA MAHASISWA -->
     <section id="kalkulator" class="py-16 bg-slate-100">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-sm">
-                
-                <div class="text-center max-w-xl mx-auto mb-8">
-                    <span class="px-3 py-1 bg-amber-100 text-amber-800 text-xs font-bold rounded-full">Hitung Transparan</span>
-                    <h2 class="text-2xl font-extrabold text-slate-900 mt-2">Kalkulator Estimasi Biaya Kantong Mahasiswa</h2>
-                    <p class="text-xs text-slate-500 mt-1">Cek dulu perkiraan harganya di sini sebelum pesan, dijamin nggak bikin dompet kering!</p>
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div
+          class="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-sm"
+        >
+          <div class="text-center max-w-xl mx-auto mb-8">
+            <span
+              class="px-3 py-1 bg-amber-100 text-amber-800 text-xs font-bold rounded-full"
+              >Hitung Transparan</span
+            >
+            <h2 class="text-2xl font-extrabold text-slate-900 mt-2">
+              Kalkulator Estimasi Biaya Kantong Mahasiswa
+            </h2>
+            <p class="text-xs text-slate-500 mt-1">
+              Cek dulu perkiraan harganya di sini sebelum pesan, dijamin nggak
+              bikin dompet kering!
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-12 gap-8 items-center">
+            <!-- Form Controls Left -->
+            <div class="md:col-span-7 space-y-5">
+              <div>
+                <label
+                  class="block text-xs font-bold text-slate-700 uppercase mb-2"
+                  >Pilih Jenis Layanan:</label
+                >
+                <select
+                  id="calc-service"
+                  onchange="calculatePrice()"
+                  class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-2.5 text-xs sm:text-sm text-slate-800 font-medium focus:ring-2 focus:ring-indigoCustom-600 focus:outline-none"
+                >
+                  <option value="abstrak">
+                    Penerjemahan Abstrak Skripsi (Paket Cepat)
+                  </option>
+                  <option value="jurnal" selected>
+                    Penerjemahan Jurnal / Tugas / Artikel (Per Halaman)
+                  </option>
+                  <option value="proofread">
+                    Proofreading & Polish Grammar (Per Halaman)
+                  </option>
+                  <option value="speaking">
+                    Simulasi Wawancara / Speaking Partner (Per 30 Menit)
+                  </option>
+                </select>
+              </div>
+
+              <!-- Range Slider -->
+              <div>
+                <div class="flex justify-between items-center mb-1">
+                  <label
+                    id="calc-label-qty"
+                    class="text-xs font-bold text-slate-700 uppercase"
+                    >Jumlah Halaman / Sesi:</label
+                  >
+                  <span
+                    id="calc-val-qty"
+                    class="text-indigoCustom-600 font-extrabold text-sm"
+                    >5 Halaman</span
+                  >
                 </div>
-
-                <div class="grid md:grid-cols-12 gap-8 items-center">
-                    <!-- Form Controls Left -->
-                    <div class="md:col-span-7 space-y-5">
-                        
-                        <div>
-                            <label class="block text-xs font-bold text-slate-700 uppercase mb-2">Pilih Jenis Layanan:</label>
-                            <select id="calc-service" onchange="calculatePrice()" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-2.5 text-xs sm:text-sm text-slate-800 font-medium focus:ring-2 focus:ring-indigoCustom-600 focus:outline-none">
-                                <option value="abstrak">Penerjemahan Abstrak Skripsi (Paket Cepat)</option>
-                                <option value="jurnal" selected>Penerjemahan Jurnal / Tugas / Artikel (Per Halaman)</option>
-                                <option value="proofread">Proofreading & Polish Grammar (Per Halaman)</option>
-                                <option value="speaking">Simulasi Wawancara / Speaking Partner (Per 30 Menit)</option>
-                            </select>
-                        </div>
-
-                        <!-- Range Slider -->
-                        <div>
-                            <div class="flex justify-between items-center mb-1">
-                                <label id="calc-label-qty" class="text-xs font-bold text-slate-700 uppercase">Jumlah Halaman / Sesi:</label>
-                                <span id="calc-val-qty" class="text-indigoCustom-600 font-extrabold text-sm">5 Halaman</span>
-                            </div>
-                            <input type="range" id="calc-qty" min="1" max="50" value="5" oninput="calculatePrice()" class="w-full accent-indigoCustom-600 cursor-pointer">
-                            <div class="flex justify-between text-[10px] text-slate-400 mt-1">
-                                <span>1</span>
-                                <span>25</span>
-                                <span>50</span>
-                            </div>
-                        </div>
-
-                        <!-- Speed Choice -->
-                        <div>
-                            <label class="block text-xs font-bold text-slate-700 uppercase mb-2">Kecepatan Pengerjaan:</label>
-                            <div class="grid grid-cols-2 gap-3">
-                                <label class="border border-slate-300 bg-slate-50 p-2.5 rounded-xl flex items-center space-x-2 cursor-pointer hover:bg-slate-100">
-                                    <input type="radio" name="speed" value="normal" checked onchange="calculatePrice()" class="accent-indigoCustom-600">
-                                    <span class="text-xs font-bold text-slate-700">Santai (2-3 Hari)</span>
-                                </label>
-                                <label class="border border-slate-300 bg-slate-50 p-2.5 rounded-xl flex items-center space-x-2 cursor-pointer hover:bg-slate-100">
-                                    <input type="radio" name="speed" value="express" onchange="calculatePrice()" class="accent-indigoCustom-600">
-                                    <span class="text-xs font-bold text-slate-700">Kilat (1x24 Jam)</span>
-                                </label>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <!-- Price Box Right -->
-                    <div class="md:col-span-5">
-                        <div class="bg-indigoCustom-50 border border-indigoCustom-100 p-6 rounded-2xl text-center space-y-4">
-                            <span class="text-xs text-indigoCustom-700 font-bold uppercase tracking-wider block">Estimasi Total Biaya</span>
-                            <div id="calc-result" class="text-3xl font-extrabold text-indigoCustom-900">Rp 75.000</div>
-                            <p id="calc-note" class="text-[11px] text-slate-500">Bisa bayar via Transfer Bank, QRIS, Dana, OVO, atau ShopeePay</p>
-                            
-                            <button onclick="sendCalcToWA()" class="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-3 rounded-xl text-xs sm:text-sm shadow-md transition-transform hover:scale-105 flex items-center justify-center">
-                                <i class="fa-brands fa-whatsapp text-lg mr-2"></i> Langsung Kunci Harga via WA
-                            </button>
-                        </div>
-                    </div>
+                <input
+                  type="range"
+                  id="calc-qty"
+                  min="1"
+                  max="50"
+                  value="5"
+                  oninput="calculatePrice()"
+                  class="w-full accent-indigoCustom-600 cursor-pointer"
+                />
+                <div
+                  class="flex justify-between text-[10px] text-slate-400 mt-1"
+                >
+                  <span>1</span>
+                  <span>25</span>
+                  <span>50</span>
                 </div>
+              </div>
 
+              <!-- Speed Choice -->
+              <div>
+                <label
+                  class="block text-xs font-bold text-slate-700 uppercase mb-2"
+                  >Kecepatan Pengerjaan:</label
+                >
+                <div class="grid grid-cols-2 gap-3">
+                  <label
+                    class="border border-slate-300 bg-slate-50 p-2.5 rounded-xl flex items-center space-x-2 cursor-pointer hover:bg-slate-100"
+                  >
+                    <input
+                      type="radio"
+                      name="speed"
+                      value="normal"
+                      checked
+                      onchange="calculatePrice()"
+                      class="accent-indigoCustom-600"
+                    />
+                    <span class="text-xs font-bold text-slate-700"
+                      >Santai (2-3 Hari)</span
+                    >
+                  </label>
+                  <label
+                    class="border border-slate-300 bg-slate-50 p-2.5 rounded-xl flex items-center space-x-2 cursor-pointer hover:bg-slate-100"
+                  >
+                    <input
+                      type="radio"
+                      name="speed"
+                      value="express"
+                      onchange="calculatePrice()"
+                      class="accent-indigoCustom-600"
+                    />
+                    <span class="text-xs font-bold text-slate-700"
+                      >Kilat (1x24 Jam)</span
+                    >
+                  </label>
+                </div>
+              </div>
             </div>
+
+            <!-- Price Box Right -->
+            <div class="md:col-span-5">
+              <div
+                class="bg-indigoCustom-50 border border-indigoCustom-100 p-6 rounded-2xl text-center space-y-4"
+              >
+                <span
+                  class="text-xs text-indigoCustom-700 font-bold uppercase tracking-wider block"
+                  >Estimasi Total Biaya</span
+                >
+                <div
+                  id="calc-result"
+                  class="text-3xl font-extrabold text-indigoCustom-900"
+                >
+                  Rp 75.000
+                </div>
+                <p id="calc-note" class="text-[11px] text-slate-500">
+                  Bisa bayar via Transfer Bank, QRIS, Dana, OVO, atau ShopeePay
+                </p>
+
+                <button
+                  onclick="sendCalcToWA()"
+                  class="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-3 rounded-xl text-xs sm:text-sm shadow-md transition-transform hover:scale-105 flex items-center justify-center"
+                >
+                  <i class="fa-brands fa-whatsapp text-lg mr-2"></i> Langsung
+                  Kunci Harga via WA
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- 5. PORTOFOLIO / CONTOH SEBELUM VS SESUDAH -->
     <section id="portofolio" class="py-16 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-2xl mx-auto mb-12">
-                <span class="text-xs font-bold text-indigoCustom-600 uppercase tracking-widest">Kualitas Terjamin</span>
-                <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-1">Contoh Hasil Terjemahan Abstrak Skripsi</h2>
-                <p class="text-slate-600 text-sm mt-2">Bukan asal *copy-paste* Google Translate, tapi disesuaikan dengan standar akademik perkuliahan.</p>
-            </div>
-
-            <div class="grid md:grid-cols-2 gap-8">
-                
-                <!-- Contoh 1: Teknik / IT -->
-                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 space-y-4">
-                    <div class="flex items-center justify-between">
-                        <span class="px-2.5 py-1 bg-blue-100 text-blue-700 font-bold text-[11px] rounded-md">Bidang: Teknik Informatika / IT</span>
-                        <span class="text-xs text-emerald-600 font-bold"><i class="fa-solid fa-circle-check"></i> Sudah Disetujui Dosen</span>
-                    </div>
-
-                    <div class="space-y-3 text-xs">
-                        <div class="p-3 bg-white rounded-xl border border-slate-200">
-                            <span class="font-bold text-slate-400 block text-[10px] uppercase mb-1">Teks Asli (Indonesia):</span>
-                            <p class="text-slate-600">"Aplikasi ini dibuat menggunakan metode Agile dengan pengujian kuesioner SUS untuk mengukur kemudahan pengguna..."</p>
-                        </div>
-                        <div class="p-3 bg-indigoCustom-50 rounded-xl border border-indigoCustom-100">
-                            <span class="font-bold text-indigoCustom-600 block text-[10px] uppercase mb-1">Hasil Terjemahan LingoKampus:</span>
-                            <p class="text-slate-800 font-semibold">"This application was developed using the Agile method, accompanied by System Usability Scale (SUS) questionnaire testing to evaluate user accessibility..."</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Contoh 2: Ekonomi / Bisnis -->
-                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 space-y-4">
-                    <div class="flex items-center justify-between">
-                        <span class="px-2.5 py-1 bg-amber-100 text-amber-800 font-bold text-[11px] rounded-md">Bidang: Ekonomi & Bisnis</span>
-                        <span class="text-xs text-emerald-600 font-bold"><i class="fa-solid fa-circle-check"></i> Lolos Ujian Skripsi</span>
-                    </div>
-
-                    <div class="space-y-3 text-xs">
-                        <div class="p-3 bg-white rounded-xl border border-slate-200">
-                            <span class="font-bold text-slate-400 block text-[10px] uppercase mb-1">Teks Asli (Indonesia):</span>
-                            <p class="text-slate-600">"Hasil analisis regresi menunjukkan bahwa literasi keuangan berpengaruh signifikan terhadap keputusan investasi UMKM..."</p>
-                        </div>
-                        <div class="p-3 bg-indigoCustom-50 rounded-xl border border-indigoCustom-100">
-                            <span class="font-bold text-indigoCustom-600 block text-[10px] uppercase mb-1">Hasil Terjemahan LingoKampus:</span>
-                            <p class="text-slate-800 font-semibold">"Regression analysis results indicate that financial literacy significantly influences the investment decision-making of MSMEs..."</p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+          <span
+            class="text-xs font-bold text-indigoCustom-600 uppercase tracking-widest"
+            >Kualitas Terjamin</span
+          >
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-1">
+            Contoh Hasil Terjemahan Abstrak Skripsi
+          </h2>
+          <p class="text-slate-600 text-sm mt-2">
+            Bukan asal *copy-paste* Google Translate, tapi disesuaikan dengan
+            standar akademik perkuliahan.
+          </p>
         </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          <!-- Contoh 1: Teknik / IT -->
+          <div
+            class="bg-slate-50 p-6 rounded-2xl border border-slate-200 space-y-4"
+          >
+            <div class="flex items-center justify-between">
+              <span
+                class="px-2.5 py-1 bg-blue-100 text-blue-700 font-bold text-[11px] rounded-md"
+                >Bidang: Teknik Informatika / IT</span
+              >
+              <span class="text-xs text-emerald-600 font-bold"
+                ><i class="fa-solid fa-circle-check"></i> Sudah Disetujui
+                Dosen</span
+              >
+            </div>
+
+            <div class="space-y-3 text-xs">
+              <div class="p-3 bg-white rounded-xl border border-slate-200">
+                <span
+                  class="font-bold text-slate-400 block text-[10px] uppercase mb-1"
+                  >Teks Asli (Indonesia):</span
+                >
+                <p class="text-slate-600">
+                  "Aplikasi ini dibuat menggunakan metode Agile dengan pengujian
+                  kuesioner SUS untuk mengukur kemudahan pengguna..."
+                </p>
+              </div>
+              <div
+                class="p-3 bg-indigoCustom-50 rounded-xl border border-indigoCustom-100"
+              >
+                <span
+                  class="font-bold text-indigoCustom-600 block text-[10px] uppercase mb-1"
+                  >Hasil Terjemahan LYRA.CO:</span
+                >
+                <p class="text-slate-800 font-semibold">
+                  "This application was developed using the Agile method,
+                  accompanied by System Usability Scale (SUS) questionnaire
+                  testing to evaluate user accessibility..."
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contoh 2: Ekonomi / Bisnis -->
+          <div
+            class="bg-slate-50 p-6 rounded-2xl border border-slate-200 space-y-4"
+          >
+            <div class="flex items-center justify-between">
+              <span
+                class="px-2.5 py-1 bg-amber-100 text-amber-800 font-bold text-[11px] rounded-md"
+                >Bidang: Ekonomi & Bisnis</span
+              >
+              <span class="text-xs text-emerald-600 font-bold"
+                ><i class="fa-solid fa-circle-check"></i> Lolos Ujian
+                Skripsi</span
+              >
+            </div>
+
+            <div class="space-y-3 text-xs">
+              <div class="p-3 bg-white rounded-xl border border-slate-200">
+                <span
+                  class="font-bold text-slate-400 block text-[10px] uppercase mb-1"
+                  >Teks Asli (Indonesia):</span
+                >
+                <p class="text-slate-600">
+                  "Hasil analisis regresi menunjukkan bahwa literasi keuangan
+                  berpengaruh signifikan terhadap keputusan investasi UMKM..."
+                </p>
+              </div>
+              <div
+                class="p-3 bg-indigoCustom-50 rounded-xl border border-indigoCustom-100"
+              >
+                <span
+                  class="font-bold text-indigoCustom-600 block text-[10px] uppercase mb-1"
+                  >Hasil Terjemahan LYRA.CO:</span
+                >
+                <p class="text-slate-800 font-semibold">
+                  "Regression analysis results indicate that financial literacy
+                  significantly influences the investment decision-making of
+                  MSMEs..."
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- 6. TESTIMONI MAHASISWA -->
     <section id="testimoni" class="py-16 bg-slate-50 border-t border-slate-200">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-2xl mx-auto mb-12">
-                <span class="text-xs font-bold text-indigoCustom-600 uppercase tracking-widest">Kata Pengguna</span>
-                <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-1">Pengalaman Teman-Teman Kampus</h2>
-                <p class="text-slate-600 text-sm mt-2">Udah banyak mahasiswa dari berbagai kampus yang terbantu kelar urusan akademiknya.</p>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-6">
-                
-                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
-                    <div class="space-y-3">
-                        <div class="flex text-amber-400 text-xs">
-                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                        </div>
-                        <p class="text-slate-600 text-xs leading-relaxed">
-                            "Penyelamat banget pas H-1 deadline kumpul skripsi! Terjemahan abstrak gue kelar cuma 5 jam dan langsung dipuji Dosen Pembimbing karena inggrisnya rapi."
-                        </p>
-                    </div>
-                    <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between">
-                        <div>
-                            <h4 class="font-bold text-slate-800 text-xs">Rian Ardiansyah</h4>
-                            <p class="text-[10px] text-slate-400">Mahasiswa Teknik UI</p>
-                        </div>
-                        <span class="text-[10px] bg-slate-100 px-2 py-1 rounded text-slate-500 font-medium">Abstrak Cepat</span>
-                    </div>
-                </div>
-
-                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
-                    <div class="space-y-3">
-                        <div class="flex text-amber-400 text-xs">
-                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                        </div>
-                        <p class="text-slate-600 text-xs leading-relaxed">
-                            "Sewa speaking partner di LingoKampus buat latihan wawancara beasiswa IISMA. Kakaknya ramah banget, ngasih masukan grammar tanpa bikin canggung."
-                        </p>
-                    </div>
-                    <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between">
-                        <div>
-                            <h4 class="font-bold text-slate-800 text-xs">Nadia Putri</h4>
-                            <p class="text-[10px] text-slate-400">Mahasiswi UGM</p>
-                        </div>
-                        <span class="text-[10px] bg-indigoCustom-50 text-indigoCustom-600 px-2 py-1 rounded font-medium">Latihan Wawancara</span>
-                    </div>
-                </div>
-
-                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
-                    <div class="space-y-3">
-                        <div class="flex text-amber-400 text-xs">
-                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                        </div>
-                        <p class="text-slate-600 text-xs leading-relaxed">
-                            "Harganya beneran ramah kantong anak kos. Jurnal 15 halaman dikerjain rapi dan ada revisi gratis pas ada istilah teknis yang mau disesuaikan."
-                        </p>
-                    </div>
-                    <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between">
-                        <div>
-                            <h4 class="font-bold text-slate-800 text-xs">Fikri Haikal</h4>
-                            <p class="text-[10px] text-slate-400">Mahasiswa Unpad</p>
-                        </div>
-                        <span class="text-[10px] bg-emerald-50 text-emerald-600 px-2 py-1 rounded font-medium">Terjemah Jurnal</span>
-                    </div>
-                </div>
-
-            </div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+          <span
+            class="text-xs font-bold text-indigoCustom-600 uppercase tracking-widest"
+            >Kata Pengguna</span
+          >
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-1">
+            Pengalaman Teman-Teman Kampus
+          </h2>
+          <p class="text-slate-600 text-sm mt-2">
+            Udah banyak mahasiswa dari berbagai kampus yang terbantu kelar
+            urusan akademiknya.
+          </p>
         </div>
+
+        <div class="grid md:grid-cols-3 gap-6">
+          <div
+            class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between"
+          >
+            <div class="space-y-3">
+              <div class="flex text-amber-400 text-xs">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+                ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+                ><i class="fa-solid fa-star"></i>
+              </div>
+              <p class="text-slate-600 text-xs leading-relaxed">
+                "Penyelamat banget pas H-1 deadline kumpul skripsi! Terjemahan
+                abstrak gue kelar cuma 5 jam dan langsung dipuji Dosen
+                Pembimbing karena inggrisnya rapi."
+              </p>
+            </div>
+            <div
+              class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between"
+            >
+              <div>
+                <h4 class="font-bold text-slate-800 text-xs">
+                  Rian Ardiansyah
+                </h4>
+                <p class="text-[10px] text-slate-400">Mahasiswa Teknik UI</p>
+              </div>
+              <span
+                class="text-[10px] bg-slate-100 px-2 py-1 rounded text-slate-500 font-medium"
+                >Abstrak Cepat</span
+              >
+            </div>
+          </div>
+
+          <div
+            class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between"
+          >
+            <div class="space-y-3">
+              <div class="flex text-amber-400 text-xs">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+                ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+                ><i class="fa-solid fa-star"></i>
+              </div>
+              <p class="text-slate-600 text-xs leading-relaxed">
+                "Sewa speaking partner di LYRA.CO buat latihan wawancara
+                beasiswa IISMA. Kakaknya ramah banget, ngasih masukan grammar
+                tanpa bikin canggung."
+              </p>
+            </div>
+            <div
+              class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between"
+            >
+              <div>
+                <h4 class="font-bold text-slate-800 text-xs">Nadia Putri</h4>
+                <p class="text-[10px] text-slate-400">Mahasiswi UGM</p>
+              </div>
+              <span
+                class="text-[10px] bg-indigoCustom-50 text-indigoCustom-600 px-2 py-1 rounded font-medium"
+                >Latihan Wawancara</span
+              >
+            </div>
+          </div>
+
+          <div
+            class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between"
+          >
+            <div class="space-y-3">
+              <div class="flex text-amber-400 text-xs">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+                ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+                ><i class="fa-solid fa-star"></i>
+              </div>
+              <p class="text-slate-600 text-xs leading-relaxed">
+                "Harganya beneran ramah kantong anak kos. Jurnal 15 halaman
+                dikerjain rapi dan ada revisi gratis pas ada istilah teknis yang
+                mau disesuaikan."
+              </p>
+            </div>
+            <div
+              class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between"
+            >
+              <div>
+                <h4 class="font-bold text-slate-800 text-xs">Fikri Haikal</h4>
+                <p class="text-[10px] text-slate-400">Mahasiswa Unpad</p>
+              </div>
+              <span
+                class="text-[10px] bg-emerald-50 text-emerald-600 px-2 py-1 rounded font-medium"
+                >Terjemah Jurnal</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- 7. FORM PEMESANAN / UPLOAD DRAFT -->
     <section id="order" class="py-16 bg-white">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="bg-slate-50 border border-slate-200 rounded-3xl p-6 sm:p-10 shadow-sm">
-                
-                <div class="text-center max-w-lg mx-auto mb-8">
-                    <span class="text-xs font-bold text-indigoCustom-600 uppercase tracking-widest">Konsultasi / Kirim Draft</span>
-                    <h2 class="text-2xl font-extrabold text-slate-900 mt-1">Form Pesan Cepat & Kirim File</h2>
-                    <p class="text-xs text-slate-500 mt-1">Isi formulir singkat di bawah untuk konsultasi langsung via WhatsApp.</p>
-                </div>
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div
+          class="bg-slate-50 border border-slate-200 rounded-3xl p-6 sm:p-10 shadow-sm"
+        >
+          <div class="text-center max-w-lg mx-auto mb-8">
+            <span
+              class="text-xs font-bold text-indigoCustom-600 uppercase tracking-widest"
+              >Konsultasi / Kirim Draft</span
+            >
+            <h2 class="text-2xl font-extrabold text-slate-900 mt-1">
+              Form Pesan Cepat & Kirim File
+            </h2>
+            <p class="text-xs text-slate-500 mt-1">
+              Isi formulir singkat di bawah untuk konsultasi langsung via
+              WhatsApp.
+            </p>
+          </div>
 
-                <form id="order-form" onsubmit="handleOrderSubmit(event)" class="space-y-4">
-                    
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        <div>
-                            <label class="block text-xs font-bold text-slate-700 mb-1">Nama Mahasiswa *</label>
-                            <input type="text" id="order-name" required placeholder="Contoh: Andi Pratama" class="w-full bg-white border border-slate-300 rounded-xl px-4 py-2.5 text-xs sm:text-sm text-slate-800 focus:ring-2 focus:ring-indigoCustom-600 focus:outline-none">
-                        </div>
-                        <div>
-                            <label class="block text-xs font-bold text-slate-700 mb-1">Asal Kampus / Universitas</label>
-                            <input type="text" id="order-campus" placeholder="Contoh: Universitas Indonesia" class="w-full bg-white border border-slate-300 rounded-xl px-4 py-2.5 text-xs sm:text-sm text-slate-800 focus:ring-2 focus:ring-indigoCustom-600 focus:outline-none">
-                        </div>
-                    </div>
-
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        <div>
-                            <label class="block text-xs font-bold text-slate-700 mb-1">Nomor WhatsApp *</label>
-                            <input type="tel" id="order-phone" required placeholder="08123456789" class="w-full bg-white border border-slate-300 rounded-xl px-4 py-2.5 text-xs sm:text-sm text-slate-800 focus:ring-2 focus:ring-indigoCustom-600 focus:outline-none">
-                        </div>
-                        <div>
-                            <label class="block text-xs font-bold text-slate-700 mb-1">Layanan yang Diperlukan</label>
-                            <select id="order-service" class="w-full bg-white border border-slate-300 rounded-xl px-4 py-2.5 text-xs sm:text-sm text-slate-800 focus:ring-2 focus:ring-indigoCustom-600 focus:outline-none">
-                                <option>Terjemah Abstrak Skripsi</option>
-                                <option>Terjemah Jurnal / Referensi</option>
-                                <option>Proofreading Grammar / Edit Teks</option>
-                                <option>Sewa Speaking Partner / Wawancara</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div>
-                        <label class="block text-xs font-bold text-slate-700 mb-1">Catatan Tambahan / Link Google Drive File Draft</label>
-                        <textarea id="order-notes" rows="3" placeholder="Tuliskan deadline kamu, topik skripsi, atau tempelkan link Google Drive jika ingin melampirkan file draft..." class="w-full bg-white border border-slate-300 rounded-xl px-4 py-2.5 text-xs sm:text-sm text-slate-800 focus:ring-2 focus:ring-indigoCustom-600 focus:outline-none"></textarea>
-                    </div>
-
-                    <button type="submit" class="w-full bg-indigoCustom-600 hover:bg-indigoCustom-700 text-white font-bold py-3.5 rounded-xl transition-all shadow-md flex items-center justify-center text-sm">
-                        <i class="fa-solid fa-paper-plane mr-2"></i> Kirim & Konsultasi Gratis
-                    </button>
-
-                </form>
-
+          <form
+            id="order-form"
+            onsubmit="handleOrderSubmit(event)"
+            class="space-y-4"
+          >
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-bold text-slate-700 mb-1"
+                  >Nama Mahasiswa *</label
+                >
+                <input
+                  type="text"
+                  id="order-name"
+                  required
+                  placeholder="Contoh: Andi Pratama"
+                  class="w-full bg-white border border-slate-300 rounded-xl px-4 py-2.5 text-xs sm:text-sm text-slate-800 focus:ring-2 focus:ring-indigoCustom-600 focus:outline-none"
+                />
+              </div>
+              <div>
+                <label class="block text-xs font-bold text-slate-700 mb-1"
+                  >Asal Kampus / Universitas</label
+                >
+                <input
+                  type="text"
+                  id="order-campus"
+                  placeholder="Contoh: Universitas Indonesia"
+                  class="w-full bg-white border border-slate-300 rounded-xl px-4 py-2.5 text-xs sm:text-sm text-slate-800 focus:ring-2 focus:ring-indigoCustom-600 focus:outline-none"
+                />
+              </div>
             </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-bold text-slate-700 mb-1"
+                  >Nomor WhatsApp *</label
+                >
+                <input
+                  type="tel"
+                  id="order-phone"
+                  required
+                  placeholder="083833843944"
+                  class="w-full bg-white border border-slate-300 rounded-xl px-4 py-2.5 text-xs sm:text-sm text-slate-800 focus:ring-2 focus:ring-indigoCustom-600 focus:outline-none"
+                />
+              </div>
+              <div>
+                <label class="block text-xs font-bold text-slate-700 mb-1"
+                  >Layanan yang Diperlukan</label
+                >
+                <select
+                  id="order-service"
+                  class="w-full bg-white border border-slate-300 rounded-xl px-4 py-2.5 text-xs sm:text-sm text-slate-800 focus:ring-2 focus:ring-indigoCustom-600 focus:outline-none"
+                >
+                  <option>Terjemah Abstrak Skripsi</option>
+                  <option>Terjemah Jurnal / Referensi</option>
+                  <option>Proofreading Grammar / Edit Teks</option>
+                  <option>Sewa Speaking Partner / Wawancara</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-xs font-bold text-slate-700 mb-1"
+                >Catatan Tambahan / Link Google Drive File Draft</label
+              >
+              <textarea
+                id="order-notes"
+                rows="3"
+                placeholder="Tuliskan deadline kamu, topik skripsi, atau tempelkan link Google Drive jika ingin melampirkan file draft..."
+                class="w-full bg-white border border-slate-300 rounded-xl px-4 py-2.5 text-xs sm:text-sm text-slate-800 focus:ring-2 focus:ring-indigoCustom-600 focus:outline-none"
+              ></textarea>
+            </div>
+
+            <button
+              type="submit"
+              class="w-full bg-indigoCustom-600 hover:bg-indigoCustom-700 text-white font-bold py-3.5 rounded-xl transition-all shadow-md flex items-center justify-center text-sm"
+            >
+              <i class="fa-solid fa-paper-plane mr-2"></i> Kirim & Konsultasi
+              Gratis
+            </button>
+          </form>
         </div>
+      </div>
     </section>
 
-    <!-- 8. FAQ SEPUTAR REVISI & KERAHASIAAN -->
-    <section id="faq" class="py-16 bg-slate-50 border-t border-slate-200">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-xl mx-auto mb-10">
-                <span class="text-xs font-bold text-indigoCustom-600 uppercase tracking-widest">Sering Ditanyakan</span>
-                <h2 class="text-2xl font-extrabold text-slate-900 mt-1">FAQ & Garansi Mahasiswa</h2>
-            </div>
-
-            <div class="space-y-4">
-                
-                <div class="bg-white p-5 rounded-2xl border border-slate-200">
-                    <h3 class="font-bold text-slate-800 text-sm flex items-center">
-                        <i class="fa-solid fa-circle-question text-indigoCustom-600 mr-2"></i> Apakah file skripsi & abstrak saya dijamin aman / tidak dibocorkan?
-                    </h3>
-                    <p class="text-xs text-slate-600 mt-2 leading-relaxed">
-                        Dijamin 100% aman dan rahasia! File kamu hanya digunakan untuk proses penerjemahan dan langsung dihapus setelah pengerjaan selesai.
-                    </p>
-                </div>
-
-                <div class="bg-white p-5 rounded-2xl border border-slate-200">
-                    <h3 class="font-bold text-slate-800 text-sm flex items-center">
-                        <i class="fa-solid fa-circle-question text-indigoCustom-600 mr-2"></i> Bagaimana kalau Dosen Pembimbing minta revisi hasil terjemahan?
-                    </h3>
-                    <p class="text-xs text-slate-600 mt-2 leading-relaxed">
-                        Tenang, kamu dapet **Garansi Revisi Gratis** sampai dosen pembimbing kamu menyetujui hasil terjemahannya (selama tidak mengubah isi tulisan asli).
-                    </p>
-                </div>
-
-                <div class="bg-white p-5 rounded-2xl border border-slate-200">
-                    <h3 class="font-bold text-slate-800 text-sm flex items-center">
-                        <i class="fa-solid fa-circle-question text-indigoCustom-600 mr-2"></i> Metode pembayaran apa saja yang diterima?
-                    </h3>
-                    <p class="text-xs text-slate-600 mt-2 leading-relaxed">
-                        Sangat fleksibel buat mahasiswa! Bisa bayar pakai e-Wallet (Dana, OVO, ShopeePay, GoPay), Transfer Bank, atau via QRIS.
-                    </p>
-                </div>
-
-            </div>
+    <!-- 8. KONTAK & INFORMASI -->
+    <section id="kontak" class="py-16 bg-slate-100 border-t border-slate-200">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-xl mx-auto mb-10">
+          <span
+            class="text-xs font-bold text-indigoCustom-600 uppercase tracking-widest"
+            >Connect With Us</span
+          >
+          <h2 class="text-2xl font-extrabold text-slate-900 mt-1">
+            Informasi Kontak LYRA.CO
+          </h2>
         </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+          <a
+            href="https://wa.me/6283833843944"
+            target="_blank"
+            class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm space-y-2 hover:border-emerald-500 transition-all"
+          >
+            <div
+              class="w-10 h-10 mx-auto bg-emerald-100 text-emerald-600 rounded-xl flex items-center justify-center text-lg"
+            >
+              <i class="fa-brands fa-whatsapp"></i>
+            </div>
+            <h3 class="font-bold text-slate-800 text-xs sm:text-sm">
+              WhatsApp
+            </h3>
+            <p class="text-[11px] text-slate-600">083833843944</p>
+          </a>
+
+          <a
+            href="https://lyra.com"
+            target="_blank"
+            class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm space-y-2 hover:border-indigoCustom-600 transition-all"
+          >
+            <div
+              class="w-10 h-10 mx-auto bg-indigoCustom-100 text-indigoCustom-600 rounded-xl flex items-center justify-center text-lg"
+            >
+              <i class="fa-solid fa-globe"></i>
+            </div>
+            <h3 class="font-bold text-slate-800 text-xs sm:text-sm">Website</h3>
+            <p class="text-[11px] text-slate-600">Lyra.com</p>
+          </a>
+
+          <a
+            href="https://tiktok.com"
+            target="_blank"
+            class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm space-y-2 hover:border-slate-800 transition-all"
+          >
+            <div
+              class="w-10 h-10 mx-auto bg-slate-100 text-slate-800 rounded-xl flex items-center justify-center text-lg"
+            >
+              <i class="fa-brands fa-tiktok"></i>
+            </div>
+            <h3 class="font-bold text-slate-800 text-xs sm:text-sm">TikTok</h3>
+            <p class="text-[11px] text-slate-600">LyRa Services</p>
+          </a>
+
+          <a
+            href="https://instagram.com"
+            target="_blank"
+            class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm space-y-2 hover:border-pink-500 transition-all"
+          >
+            <div
+              class="w-10 h-10 mx-auto bg-pink-100 text-pink-600 rounded-xl flex items-center justify-center text-lg"
+            >
+              <i class="fa-brands fa-instagram"></i>
+            </div>
+            <h3 class="font-bold text-slate-800 text-xs sm:text-sm">
+              Instagram
+            </h3>
+            <p class="text-[11px] text-slate-600">@Lyra.Co</p>
+          </a>
+        </div>
+      </div>
     </section>
 
-    <!-- 9. FOOTER -->
-    <footer class="bg-slate-900 text-slate-400 py-10 text-xs border-t border-slate-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4">
-            <div class="flex items-center space-x-2">
-                <div class="w-7 h-7 rounded-lg bg-indigoCustom-600 flex items-center justify-center text-white font-bold">
-                    <i class="fa-solid fa-graduation-cap"></i>
-                </div>
-                <span class="text-sm font-bold text-white">LingoKampus</span>
-                <span class="text-slate-500">| Partner Terjemah & Skripsi Mahasiswa</span>
-            </div>
-            <p>&copy; 2026 LingoKampus. Dibuat ramah khusus untuk mahasiswa Indonesia.</p>
+    <!-- 9. FAQ SEPUTAR REVISI & KERAHASIAAN -->
+    <section id="faq" class="py-16 bg-white border-t border-slate-200">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-xl mx-auto mb-10">
+          <span
+            class="text-xs font-bold text-indigoCustom-600 uppercase tracking-widest"
+            >Sering Ditanyakan</span
+          >
+          <h2 class="text-2xl font-extrabold text-slate-900 mt-1">
+            FAQ & Garansi Mahasiswa
+          </h2>
         </div>
+
+        <div class="space-y-4">
+          <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200">
+            <h3 class="font-bold text-slate-800 text-sm flex items-center">
+              <i
+                class="fa-solid fa-circle-question text-indigoCustom-600 mr-2"
+              ></i>
+              Apakah file skripsi & abstrak saya dijamin aman / tidak
+              dibocorkan?
+            </h3>
+            <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+              Dijamin 100% aman dan rahasia! File kamu hanya digunakan untuk
+              proses penerjemahan dan langsung dihapus setelah pengerjaan
+              selesai.
+            </p>
+          </div>
+
+          <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200">
+            <h3 class="font-bold text-slate-800 text-sm flex items-center">
+              <i
+                class="fa-solid fa-circle-question text-indigoCustom-600 mr-2"
+              ></i>
+              Bagaimana kalau Dosen Pembimbing minta revisi hasil terjemahan?
+            </h3>
+            <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+              Tenang, kamu dapet **Garansi Revisi Gratis** sampai dosen
+              pembimbing kamu menyetujui hasil terjemahannya (selama tidak
+              mengubah isi tulisan asli).
+            </p>
+          </div>
+
+          <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200">
+            <h3 class="font-bold text-slate-800 text-sm flex items-center">
+              <i
+                class="fa-solid fa-circle-question text-indigoCustom-600 mr-2"
+              ></i>
+              Metode pembayaran apa saja yang diterima?
+            </h3>
+            <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+              Sangat fleksibel buat mahasiswa! Bisa bayar pakai e-Wallet (Dana,
+              OVO, ShopeePay, GoPay), Transfer Bank, atau via QRIS.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. FOOTER -->
+    <footer
+      class="bg-slate-900 text-slate-400 py-10 text-xs border-t border-slate-800"
+    >
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4"
+      >
+        <div class="flex items-center space-x-2">
+          <div
+            class="w-7 h-7 rounded-lg bg-indigoCustom-600 flex items-center justify-center text-white font-bold"
+          >
+            <i class="fa-solid fa-graduation-cap"></i>
+          </div>
+          <span class="text-sm font-bold text-white">LYRA.CO</span>
+          <span class="text-slate-500"
+            >| Partner Terjemah & Skripsi Mahasiswa</span
+          >
+        </div>
+        <p>
+          &copy; 2026 LYRA.CO (LyRa Services). Dibuat ramah khusus untuk
+          mahasiswa Indonesia.
+        </p>
+      </div>
     </footer>
 
     <!-- JAVASCRIPT LOGIC -->
     <script>
-        function toggleMobileMenu() {
-            const menu = document.getElementById('mobile-menu');
-            menu.classList.toggle('hidden');
+      function toggleMobileMenu() {
+        const menu = document.getElementById("mobile-menu");
+        menu.classList.toggle("hidden");
+      }
+
+      function calculatePrice() {
+        const service = document.getElementById("calc-service").value;
+        const qty = parseInt(document.getElementById("calc-qty").value);
+        const speed = document.querySelector(
+          'input[name="speed"]:checked',
+        ).value;
+
+        const qtyLabel = document.getElementById("calc-label-qty");
+        const qtyValDisplay = document.getElementById("calc-val-qty");
+        const resultDisplay = document.getElementById("calc-result");
+
+        let total = 0;
+
+        if (service === "abstrak") {
+          qtyLabel.innerText = "Jumlah Abstrak:";
+          qtyValDisplay.innerText = qty + " Abstrak";
+          let baseRate = 35000;
+          if (speed === "express") baseRate = 50000;
+          total = qty * baseRate;
+        } else if (service === "jurnal") {
+          qtyLabel.innerText = "Jumlah Halaman:";
+          qtyValDisplay.innerText = qty + " Halaman";
+          let baseRate = 15000;
+          if (speed === "express") baseRate = 25000;
+          total = qty * baseRate;
+        } else if (service === "proofread") {
+          qtyLabel.innerText = "Jumlah Halaman:";
+          qtyValDisplay.innerText = qty + " Halaman";
+          let baseRate = 10000;
+          if (speed === "express") baseRate = 15000;
+          total = qty * baseRate;
+        } else if (service === "speaking") {
+          qtyLabel.innerText = "Jumlah Sesi (30m):";
+          qtyValDisplay.innerText = qty + " Sesi (" + qty * 30 + " Menit)";
+          let baseRate = 50000;
+          total = qty * baseRate;
         }
 
-        function calculatePrice() {
-            const service = document.getElementById('calc-service').value;
-            const qty = parseInt(document.getElementById('calc-qty').value);
-            const speed = document.querySelector('input[name="speed"]:checked').value;
-            
-            const qtyLabel = document.getElementById('calc-label-qty');
-            const qtyValDisplay = document.getElementById('calc-val-qty');
-            const resultDisplay = document.getElementById('calc-result');
+        resultDisplay.innerText = "Rp " + total.toLocaleString("id-ID");
+      }
 
-            let total = 0;
+      function sendCalcToWA() {
+        const service =
+          document.getElementById("calc-service").options[
+            document.getElementById("calc-service").selectedIndex
+          ].text;
+        const qty = document.getElementById("calc-val-qty").innerText;
+        const price = document.getElementById("calc-result").innerText;
 
-            if (service === 'abstrak') {
-                qtyLabel.innerText = "Jumlah Abstrak:";
-                qtyValDisplay.innerText = qty + " Abstrak";
-                let baseRate = 35000;
-                if (speed === 'express') baseRate = 50000;
-                total = qty * baseRate;
-            } else if (service === 'jurnal') {
-                qtyLabel.innerText = "Jumlah Halaman:";
-                qtyValDisplay.innerText = qty + " Halaman";
-                let baseRate = 15000;
-                if (speed === 'express') baseRate = 25000;
-                total = qty * baseRate;
-            } else if (service === 'proofread') {
-                qtyLabel.innerText = "Jumlah Halaman:";
-                qtyValDisplay.innerText = qty + " Halaman";
-                let baseRate = 10000;
-                if (speed === 'express') baseRate = 15000;
-                total = qty * baseRate;
-            } else if (service === 'speaking') {
-                qtyLabel.innerText = "Jumlah Sesi (30m):";
-                qtyValDisplay.innerText = qty + " Sesi (" + (qty * 30) + " Menit)";
-                let baseRate = 50000;
-                total = qty * baseRate;
-            }
+        const text = `Halo LYRA.CO, mau konsultasi terjemah:%0A- Layanan: ${service}%0A- Jumlah: ${qty}%0A- Estimasi Harga: ${price}%0A%0ABisa bantu proses sekarang?`;
+        window.open(`https://wa.me/6283833843944?text=${text}`, "_blank");
+      }
 
-            resultDisplay.innerText = "Rp " + total.toLocaleString('id-ID');
-        }
+      function handleOrderSubmit(e) {
+        e.preventDefault();
+        const name = document.getElementById("order-name").value;
+        const campus = document.getElementById("order-campus").value;
+        const service = document.getElementById("order-service").value;
+        const notes = document.getElementById("order-notes").value;
 
-        function sendCalcToWA() {
-            const service = document.getElementById('calc-service').options[document.getElementById('calc-service').selectedIndex].text;
-            const qty = document.getElementById('calc-val-qty').innerText;
-            const price = document.getElementById('calc-result').innerText;
+        const text = `Halo LYRA.CO, saya mau order/konsultasi terjemah:%0A- Nama: ${name}%0A- Kampus: ${campus}%0A- Layanan: ${service}%0A- Catatan/Link: ${notes}`;
+        window.open(`https://wa.me/6283833843944?text=${text}`, "_blank");
+      }
 
-            const text = `Halo LingoKampus, mau konsultasi terjemah:%0A- Layanan: ${service}%0A- Jumlah: ${qty}%0A- Estimasi Harga: ${price}%0A%0ABisa bantu proses sekarang?`;
-            window.open(`https://wa.me/628123456789?text=${text}`, '_blank');
-        }
-
-        function handleOrderSubmit(e) {
-            e.preventDefault();
-            const name = document.getElementById('order-name').value;
-            const campus = document.getElementById('order-campus').value;
-            const service = document.getElementById('order-service').value;
-            const notes = document.getElementById('order-notes').value;
-
-            const text = `Halo LingoKampus, saya mau order/konsultasi terjemah:%0A- Nama: ${name}%0A- Kampus: ${campus}%0A- Layanan: ${service}%0A- Catatan/Link: ${notes}`;
-            window.open(`https://wa.me/628123456789?text=${text}`, '_blank');
-        }
-
-        window.onload = function() {
-            calculatePrice();
-        }
+      window.onload = function () {
+        calculatePrice();
+      };
     </script>
-</body>
+  </body>
 </html>
